@@ -41,6 +41,6 @@ pagina();
 
 ?>
 
-	
+<!--TS ing-->
 </body>
 </html>
