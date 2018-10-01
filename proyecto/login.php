@@ -15,7 +15,7 @@
     </form>
 
 <?php
-$conexion=@mysql_connect("localhost","root","");
+$conexion=@mysql_connect("localhost","test","");
 
 if (!$conexion) {
 
