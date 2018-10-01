@@ -11,11 +11,11 @@
     <form >
     Ingrese su nombre de usuario<input type="text" name="usuario">
     Ingrese su contraseña<input type="text" name="contraseña">
-    <input type="submit" value="enviar">	
+    <input type="submit" value="enviar">
     </form>
 
 <?php
-$conexion=@mysql_connect("localhost","root","tuputisimamadre");
+$conexion=@mysql_connect("localhost","root","");
 
 if (!$conexion) {
 
@@ -30,7 +30,7 @@ $query=mysql_query("select *from users where id='".user." and password='".passwo
 
 if (!$data=mysql_fetch_assoc($query)) {
 	echo "usuario no valido";
-	
+
 }
 
 else {
