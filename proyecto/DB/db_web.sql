@@ -9,3 +9,5 @@ create table users(
   password varchar(25)
 
 );
+
+insert into users values(1,'usuario1','12345');
