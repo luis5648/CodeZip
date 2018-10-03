@@ -1,6 +1,6 @@
--- esos comandos deberían funcionar, si no, dejen comentarios de que no.
+-- configuración de usuarios correcta.
 
-create user 'test'@'%' IDENTIFIED by '';
+create user 'test'@'localhost' IDENTIFIED by '123';
 
-GRANT all PRIVILEGES on *.* to 'test';
-flush PRIVILEGES;
+GRANT ALL PRIVILEGES ON * . * TO 'test'@'localhost';
+flush privileges;
