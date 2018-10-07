@@ -1,0 +1,5 @@
+En ésta carpeta de cursos, se pondrá la información que contendrá cada curso
+según el html que corresponda. Cada uno de los html's de aqui podría ser accesible (aun sujeto a discución)
+desde el html de la carpeta raíz "ListadoDeCursos.html" que a su vez es accesible desde el perdil del usuario.
+
+En cada archivo de curso (ej: Java.html) habrá la opción de que el alumno tome ese curso. 
