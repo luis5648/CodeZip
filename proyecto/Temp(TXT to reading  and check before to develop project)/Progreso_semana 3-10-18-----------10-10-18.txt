@@ -1,14 +1,15 @@
 -poner CSS al Login, ventanas nuevas (blog, organigrama de curso java/c/c++ )
--Crear Html's de cursos (java,c,c++)
+
+-Crear Html's de cursos (java,c,c++)----------------------------(done (sujeto a aÃ±adir mÃ¡s))
+
 -Crear carpeta de CSS's de toda la web--------------------------(DOOOONNNNNEEE)
 -HTML + php para perfil de usuario (validar enlaces a cursos , iniciar curso)
 -Table plus in users , to problems
 -parte de consulta de codigo (consulta de tutor)
 
 -Proyecto debe tener 2 partes (usarios / tutores)
--Una tabla más en la BD para los Turores
+-Una tabla mï¿½s en la BD para los Turores
 -HTML de tutores (crear cursos, subir problemas,ejemplos)
--nombre proyecto y página?????????
+-nombre proyecto y pï¿½gina?????????
 -contrato, revisar con abogada
 -crear direcciones entre html's (cursos, perfiles, blog,concursos)
-
