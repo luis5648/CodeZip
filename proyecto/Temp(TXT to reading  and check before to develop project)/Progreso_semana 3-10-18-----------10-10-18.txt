@@ -4,12 +4,12 @@
 
 -Crear carpeta de CSS's de toda la web--------------------------(DOOOONNNNNEEE)
 -HTML + php para perfil de usuario (validar enlaces a cursos , iniciar curso)
--Table plus in users , to problems
+-Table plus in users , to problems---------------------------------------------(listo)
 -parte de consulta de codigo (consulta de tutor)
 
 -Proyecto debe tener 2 partes (usarios / tutores)
--Una tabla m�s en la BD para los Turores
--HTML de tutores (crear cursos, subir problemas,ejemplos)
--nombre proyecto y p�gina?????????
+-Una tabla m�s en la BD para los Turores.................................(listo)
+-HTML de tutores (crear cursos, subir problemas,ejemplos)...............()
+-nombre proyecto y p�gina?????????--------------------------------------(CODE.zip)
 -contrato, revisar con abogada
 -crear direcciones entre html's (cursos, perfiles, blog,concursos)
