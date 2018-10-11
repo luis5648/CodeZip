@@ -25,7 +25,7 @@ if (empty($usuario) | empty($pass))
 	exit();
 	}
 //VALIDANDO EXISTENCIA DEL USUARIO
-$sql = "SELECT * from users where name = '$usuario' and password = '$pass' ";
+$sql = "SELECT * from alumnos  where nombreAlumno = '$usuario' and passAlumno = '$pass' ";
 $result = $conn->query($sql);
 if ($result->num_rows > 0)
 		{

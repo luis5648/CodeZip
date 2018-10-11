@@ -54,4 +54,8 @@ create table problemasSoluc(
 
 );
 
-insert into users values(1,'usuario1','12345');
+insert into cursos values (1,'Java');
+insert into cursos values (2,'Python');
+insert into cursos values (3,'C, C++');
+
+insert into alumnos values (1,'user1','12345',1,1);
