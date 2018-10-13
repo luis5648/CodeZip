@@ -13,3 +13,6 @@
 -nombre proyecto y p�gina?????????--------------------------------------(CODE.zip)
 -contrato, revisar con abogada
 -crear direcciones entre html's (cursos, perfiles, blog,concursos)
+
+
+-Alex , (crear coleccion de problemas/ejemplos de lenguajes que se impartiran como cursos, C, C++, JAVA)
