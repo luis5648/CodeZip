@@ -13,7 +13,9 @@ create table alumnos(
 
   idAlumno int primary key not null auto_increment,
   nombreAlumno varchar(25),
+  apellidosAlumno varchar(25),
   passAlumno varchar(25),
+  emailAlumno varchar(60),
   nivel int,
   cursosSiguiendo int,
   foreign key (cursosSiguiendo) references cursos(idCurso)
@@ -58,4 +60,4 @@ insert into cursos values (1,'Java');
 insert into cursos values (2,'Python');
 insert into cursos values (3,'C, C++');
 
-insert into alumnos values (1,'user1','12345',1,1);
+insert into alumnos values (1,'user1','ap1','12345','123@123.com',1,1);
