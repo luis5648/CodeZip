@@ -1,30 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-	<meta charset="UTF-8">
-	<title>LOGIN</title>
-	<link rel="stylesheet" href="CSS/login.css">
+  <meta charset="UTF-8">
+  <title>Register/Login</title>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel="stylesheet" href="CSS/style-login.css">
 </head>
 <body>
-	<div class="head">
-		<h2>Page_Programs</h2>
-	</div>
+  <div class="form">
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Registro</a></li>
+        <li class="tab"><a href="#login">Entrar</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="signup">
+          <h1>Registrate gratis</h1>
+          <form action="" method="post">
+            <!-- ASIGNAR RUTA DEL FORM PARA NEW-USER!!!!!!!!!!!1-->
 
-	<div class="divPrin">
-	<h1 class="h1-title">Iniciar Sesion</h1>
-	<h1 class="h1-subtitle">(Ingrese sus datos)</h1>
-    <form action="Control(php_files)/validar.php" method="post">
-    nombre de usuario<br><input type="text" name="txtusuario">
-		<br>
-    contraseña<br><input type="password" name="txtpass">
-		<br>
-    <input type="submit" name="login" value="Iniciar sesión">
-    </form>
-		</div>
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                Nombre(s)<span class="req">*</span>
+              </label>
+              <input type="text" name ="newNombreRegistro" required autocomplete="off" />
+            </div>
 
-		<footer class="footer">
-			<p> Universidad de Guadalajara , Centro Universitario de Tonalá, Tonalá, Jalisco, México</p>
-		</footer>
+            <div class="field-wrap">
+              <label>
+                Apellidos<span class="req">*</span>
+              </label>
+              <input type="text" name="newApellidoRegistro" required autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <label>Email<span class="req">*</span></label>
+            <input type="email"name="newMailRegristro" required autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Escriba una contraseña<span class="req">*</span>
+            </label>
+            <input type="password" name="newPaswwordRegistro"required autocomplete="off"/>
+          </div>
+
+          <button type="submit" class="button button-block"/>Registrarme !</button>
+          </form>
+        </div>
+
+              <!-- LOGIN !!!!!!!!!!!!-->
+        <div id="login">
+          <h1>Bienvenido !</h1>
+
+          <form action="Control(php_files)/validar.php" method="post">
+
+            <div class="field-wrap">
+            <label>
+              Usuario<span class="req">*</span>
+            </label>
+            <input type="text" name="txtusuario" required autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Contraseña<span class="req">*</span>
+            </label>
+            <input type="password" name="txtpass" required autocomplete="off"/>
+          </div>
+
+          <!-- ASIGNAR HTMML REFERENTE A UN OLVIDO DE CONTRASEÑA PARA PETICION DE RECUPERACIÓN -->
+          <p class="forgot"><a href="#">Olvidaste tu contraseña?</a></p>
+
+          <button class="button button-block"/>Entrar</button>
+          </form>
+        </div>
+      </div><!-- tab-contenido or tab Content -->
+
+</div> <!-- /form -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script  src="JS/js-login.js"></script>
 
 </body>
+
 </html>
