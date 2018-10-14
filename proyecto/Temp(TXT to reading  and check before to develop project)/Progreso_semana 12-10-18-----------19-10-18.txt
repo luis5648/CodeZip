@@ -1,6 +1,6 @@
 ﻿0.-Nombre proyecto y p�gina (CODE.zip)!!! [tomar estos valores para Venta/Logo/Tarjetas]
 
-1-poner CSS al Login (HECHO!!!)///[REVISIÓN EN ESPERA...] 
+1-poner CSS al Login (HECHO!!!)///[REVISIÓN EN ESPERA...]
 2.-Crear Html's de cursos (java,c,c++)-(HECHO!!!)///[sujeto a añadir más],[CSS In developement...] [-JL]
 	-Agregar contenido [-JL]
 3.-HTML + php para perfil de usuario (validar enlaces a cursos , iniciar curso)
@@ -13,12 +13,12 @@
 7.-crear direcciones entre html's (cursos, perfiles, blog,concursos) [HACER???]
 
 8.-Diseño CSS/HTML [-ARTURO]
-	-HOME PAGE 
+	-HOME PAGE
 	-Page USER
 	-Page Tutor (ONLY CSS.CheckREPO)
 
 9.-BD / save new users [ROMAN] [IN DEVELOPEMENT...]
-10.- Check LOGIN [ROMAN or MIRSH] 
+10.- Check LOGIN [ROMAN or MIRSH]
 
 
 
@@ -27,4 +27,4 @@ Uno para todos y todos para uno..
 				Extraño a .zip we :( !!
 
 
-
+//Arturo S  enter to Commit this repository !!! //Ignore this change's || Commit
