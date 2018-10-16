@@ -17,7 +17,7 @@
 	-Page USER
 	-Page Tutor (ONLY CSS.CheckREPO)
 
-9.-BD / save new users [ROMAN] [IN DEVELOPEMENT...]
+9.-BD / save new users [ROMAN] ---- Listo :)
 10.- Check LOGIN [ROMAN or MIRSH]
 
 
