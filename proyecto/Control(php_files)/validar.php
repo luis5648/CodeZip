@@ -12,7 +12,7 @@ if (empty($usuario) | empty($pass))
 	exit();
 	}
 //VALIDANDO EXISTENCIA DEL USUARIO
-$sql = "SELECT * from alumnos  where nombreAlumno = '$usuario' and passAlumno = '$pass' ";
+$sql = "SELECT * from alumnos  where nombreUsuario = '$usuario' and passAlumno = '$pass' ";
 $result = $conn->query($sql);
 if ($result->num_rows > 0)
 		{
