@@ -1,6 +1,6 @@
 
 create database web;
-use web
+use web;
 
 create table cursos(
   idCurso int primary key not null auto_increment,
@@ -29,6 +29,7 @@ create table tutores(
   nombreTutor varchar(25),
   apellidoPaterno varchar(25),
   apellidoMaterno varchar(25),
+  passTutor varchar(25),
   nombreUsuario varchar(25),
   especialidad int,
 
