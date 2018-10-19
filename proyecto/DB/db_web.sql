@@ -62,4 +62,7 @@ insert into cursos values (1,'Java');
 insert into cursos values (2,'Python');
 insert into cursos values (3,'C, C++');
 
+
+insert  into tutores values (1,'josé','ap1','ap2','123','nick','2');
 insert into alumnos values (1,'Luis','ap1','user1','12345','123@123.com',1,1);
+

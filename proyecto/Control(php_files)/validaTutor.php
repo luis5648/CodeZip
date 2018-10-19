@@ -21,10 +21,10 @@ if (isset($_POST['logTutor'])){
     if($result->num_rows>0){
         session_start();
         $_SESSION['usuario'] = $userTutor;
-        header( "Location ../Tutores/loginTutor.html");
+        echo '<script> alert("logueo exitoso!") </script>';
     }else{
         //falló al autentificar
-        header("Location: ../login.html");
+        header( "Location ../Tutores/loginTutor.html");
         exit();
     }
 }
