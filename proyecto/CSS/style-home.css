@@ -24,18 +24,21 @@ header.smaller nav a {
 }
 
 body {
-	color: #505050;
+	/*color: #505050;*/
+	color: black;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 1.8;
+	background-color: black;
 
 }
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1;
 	font-weight: 100;
-	color: #77C7AC;
+	/*color: #77C7AC;*/
+	color: #49ACAE;
 }
 
 a {
@@ -55,16 +58,18 @@ a:hover {
 }
 
 #main {
-	background-color: #fff;
+	/*background-color: #fff;*/
+	background-color: #C4C4C7;
 	padding-top: 150px;
   min-height:500px;
 }
 
 .container {
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 	padding: 0 30px;
-	text-align: justify;
+	text-align: left;
+	
 
 }
 
@@ -77,6 +82,9 @@ section h1 {
 	margin-bottom: 10px;
 }
 
+.primerP{
+
+}
 section p {
 	margin-bottom: 30px;
 }
@@ -86,7 +94,8 @@ section p:last-child {
 }
 
 section.color {
-	background-color: #f4f4f4;
+	/*background-color: #f4f4f4;*/
+	background-color: #D3D3D6;
 }
 
 header {
@@ -108,7 +117,7 @@ header h1#logo {
 	line-height:3em;
    margin: 0;
    padding:0 1em;
-   
+
 	float: left;
 	font-family: "Console";
 	font-size: 60px;
@@ -160,7 +169,7 @@ header.smaller nav a {
 footer {
 	background-color: #3c3c3c;
 	text-align: center;
-	
+
    min-height:17em;
    color: #bababa;
 }
@@ -183,18 +192,18 @@ footer ul li a:hover {
 	color: #fd5559;
 }
 footer ul li a {
-    color: #bababa;  
+    color: #bababa;
 }
 footer div#copy {
   margin-top: 1em;
   padding:0;
 }
 footer div#copy a {
-  color: #fd5559;  
+  color: #fd5559;
 }
 footer div.container {
   position:relative;
-  
+
 }
 footer ul{
   list-style:none;
@@ -220,7 +229,7 @@ footer ul li {
 		display: block;
 		float: none;
 		margin: 0 auto;
-		height: 100px;     
+		height: 100px;
 		line-height: 80px;
 		text-align: center;
 	}
@@ -278,4 +287,3 @@ footer ul li {
 		display: block;
 	}
 }
-
