@@ -71,7 +71,6 @@ a:hover {
 	text-align: left;
 
 
-
 }
 
 section {
@@ -286,45 +285,3 @@ footer ul li {
 		display: block;
 	}
 }
-
-
-.dropbtn{
-		background-color: green;
-		color:white;
-		padding: 12px;
-		font-size: 16px;
-		border:none;
-		cursor: pointer;
-	}
-	.dropdown{
-		position:relative;
-		display: inline-block;
-
-	}
-	.dropcontent{
-		display: none;
-		position: absolute;
-		background-color: #444;
-		min-width: 150px;
-		box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.2);
-	}
-	.dropcontent a{
-		color: white;
-		padding: 10px 16px;
-		text-decoration: none;
-		display: block;
-
-	}
-
-	.dropcontent a:hover{
-		background-color:#999;
-		color: white;
-
-	}
-	.dropdown:hover .dropcontent{
-		display: block;
-	}
-
-	.dropdown:hover .dropbtn {
-		background-color: red;
-	}
