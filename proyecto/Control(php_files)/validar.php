@@ -18,10 +18,12 @@ if ($result->num_rows > 0)
 		{
 		session_start();
 		$_SESSION['usuario'] = $usuario;
-		header("Location: ../PerfilUsuario.html");
+            echo '<script> alert("logueo exitoso!");
+        location.href = "../USERs/PerfilUsuario.html" </script>';
 		}else
 			{
-			header("Location: ../login.html");
+                echo '<script> alert("Usuario o contraseña incorrectos");
+        location.href = "../PAGE-INIT/home.html" </script>';
 			exit();
 		}
 }

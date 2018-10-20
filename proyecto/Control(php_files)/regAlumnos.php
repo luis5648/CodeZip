@@ -27,8 +27,9 @@ if (isset($_POST['registroAl'])) {
     			{
             $insertUser = "INSERT INTO alumnos (nombreAlumno,apellidosAlumno,nombreUsuario,passAlumno,emailAlumno) VALUES ('$usuario','$apellidos','$nickName','$pass','$eMail')";
             if ($conn->query($insertUser) === TRUE) {
-              echo '<script type="text/javascript">alert("Usuario registrado con éxito")</script>';
-              header("Location: ../login.html");
+              echo '<script type="text/javascript">alert("Usuario registrado con éxito");
+                location.href="../PAGE-INIT/home.html";</script>';
+
               exit();
             }
             else {
