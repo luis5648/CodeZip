@@ -21,7 +21,9 @@ if (isset($_POST['logTutor'])){
     if($result->num_rows>0){
         session_start();
         $_SESSION['usuario'] = $userTutor;
-        echo '<script> alert("logueo exitoso!") </script>';
+        echo '<script> alert("logueo exitoso!");
+        location.href = "../Tutores/PerfilTutor.html" </script>';
+
     }else{
         //falló al autentificar
         header( "Location ../Tutores/loginTutor.html");
