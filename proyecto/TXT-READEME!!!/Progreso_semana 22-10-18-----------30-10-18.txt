@@ -1,31 +1,35 @@
 ﻿0.-Nombre proyecto y p�gina (CODE.zip)!!! [tomar estos valores para Venta/Logo/Tarjetas]
-
+[ESPERA A LA ENTREGA...]
 1-poner CSS al Login (HECHO!!!)///[REVISIÓN EN ESPERA...]
+[HECHO!!!!!]
 2.-Crear Html's de cursos (java,c,c++)-(HECHO!!!)///[sujeto a añadir más],[CSS In developement...] [-JL]
 	-Agregar contenido [-JL]
+	[HECHO!!!!]
+
 3.-HTML + php para perfil de usuario (validar enlaces a cursos , iniciar curso)
+[ya hay acceso y navegación!!]
+
+{
+	.-PAGINAS DE CURSOS (VISUALIZADA POR USER's) [en proceso...]
+	.-ADAPATACIÓN DE AYUDA (LIBROS PDF) [en proceso...]
+}
+
 4.-Consulta de codigo HTML (consulta de tutor para revision de archivos subidos por el USER) [ HACER???]
+[REALIZAR !!]
+
+
 5.-HTML de tutores (crear cursos, subir problemas,ejemplos)
 	-Ejemplos:
 	[-Alex] , (crear coleccion de problemas/ejemplos de lenguajes que se impartiran como cursos, C, C++, JAVA)
 
-6.-contrato [EN REVISION CON GABY]
+6.-contrato [EN REVISION CON GABY] [EN ESPERA ..]
 7.-crear direcciones entre html's (cursos, perfiles, blog,concursos) [HACER???]
+[HECHO !!]
 
 8.-Diseño CSS/HTML [-ARTURO]
-	-HOME PAGE
-	-Page USER
-	-Page Tutor (ONLY CSS.CheckREPO)
+	-HOME PAGE  [HECHO !!!]
+	-Page USER	[EN PROCESO....]
+	-Page Tutor (ONLY CSS.CheckREPO) [EN PROCESO...]
 
-9.-BD / save new users [ROMAN] ---- Listo :)
-10.- Check LOGIN [ROMAN or MIRSH]
-
-
-
-
-Uno para todos y todos para uno..
-				Extraño a .zip we :( !!
-
-
-//Arturo S  enter to Commit this repository !!! //Ignore this change's || Commit
-////new coment !!! !!! , TEST !!!
+9.-BD / save new users [ROMAN] ---- Listo :) [HECHO!!!!]
+10.- Check LOGIN [ROMAN or MIRSH] [HECHO !!!]
