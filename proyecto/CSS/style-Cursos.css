@@ -73,6 +73,24 @@ a:hover {
 
 }
 
+.encabezado{
+	background-color: darkgray;
+	text-align: center;
+	font-style: Console;
+
+
+}
+
+.encabezado-titulo{
+	color: black;
+	text-align: center;
+}
+
+.encabezado-text{
+color:green;
+text-align:center;
+}
+
 section {
 	padding: 60px 0;
 }

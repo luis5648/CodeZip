@@ -1,0 +1,97 @@
+
+html,
+body {
+  padding: 10px;
+  font-family: 'Varela Round';
+  background-color: darkgray;
+}
+
+.etc-login-form {
+  color: #919191;
+  padding: 10px 20px;
+}
+.etc-login-form p {
+  margin-bottom: 5px;
+}
+.boxMail{
+  border: none;
+  font-size: 12px;
+}
+.tituloMail{
+  font-size: 18px;
+}
+
+.login-box {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color: #d2d2d2;
+    border-width: 5px;
+    box-shadow: 0 1px 0 #cfcfcf;
+    width: 330px;
+    padding: 0 0 0 10px;
+    margin: 15px auto;
+}
+
+.login-form-1 {
+  max-width: 300px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.main-login-form {
+  position: relative;
+}
+
+
+.ButonEnviar {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.BotonEnviar:hover {
+  background-color: #3e8e41
+}
+
+
+
+
+
+.login-form-1 .form-group {
+  margin-bottom: 0;
+  border-bottom: 2px solid #efefef;
+  padding-right: 20px;
+  position: relative;
+}
+.login-form-1 .form-group:last-child {
+  border-bottom: 0;
+}
+.login-group {
+  background: #ffffff;
+  color: #999999;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+
+
+.logo {
+  padding: 15px 0;
+  font-size: 25px;
+  color: #aaaaaa;
+  font-weight: bold;
+  text-align: center;
+
+}

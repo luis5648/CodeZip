@@ -1,0 +1,20 @@
+		[VISTA] {SOLO VISITANTES (NO USER's)}
+
+1.-HOME 
+	-90%! (modificaciones opcionales)
+
+
+2.-CURSOS (solo introduccion de lo que se ve)
+
+	-100%? (abierto a modificaciones)
+	-Encales colocados con advertencías!
+	-
+3.-ABOUT US
+
+	-90% (Abierto a cambios recomendados)
+
+4.-LOGIN 
+	-95% (falta validar solo mails UDG)[Script no funcional :( ]
+
+5.-CONTRASEÑA OLVIDADA 
+	-95% (falta direccionar los datos del formulario a BD o ver a donde direccionar)

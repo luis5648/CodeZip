@@ -34,7 +34,11 @@
         <div id="signup">
           <h1 class="h1Registro">Registrate gratis</h1>
           <form action="../Control(php_files)/regAlumnos.php" method="post">
-            <!-- ASIGNAR RUTA DEL FORM PARA NEW-USER!!!!!!!!!!!1-->
+            <!-- ASIGNAR RUTA DEL FORM PARA NEW-USER!!!!!!!!
+
+
+
+						HECHO!!!!!!!!!!!!!!1-->
 
           <div class="top-row">
             <div class="field-wrap">
@@ -55,8 +59,9 @@
 
           <div class="field-wrap">
             <label>Email<span class="req">*</span></label>
-            <input type="email"name="newMailRegistro" required autocomplete="off"/>
+            <input  id="EMAIL"type="email"name="newMailRegistro" required autocomplete="off"/>
           </div>
+
 
           <div class="field-wrap">
             <label>Nombre de usuario<span class="req">*</span></label>
@@ -70,7 +75,7 @@
             <input type="password" name="newPaswwordRegistro"required autocomplete="off"/>
           </div>
 
-          <button type="submit" name="registroAl" class="button button-block"/>Registrarme !</button>
+          <button type="submit" name="registroAl" class="button button-block" onclick="return:javascript:restriccionUDGmail();"/>Registrarme !</button>
           </form>
         </div>
 
@@ -95,7 +100,7 @@
           </div>
 
           <!-- ASIGNAR HTMML REFERENTE A UN OLVIDO DE CONTRASEÑA PARA PETICION DE RECUPERACIÓN -->
-          <p class="forgot"><a href="#">Olvidaste tu contraseña?</a></p>
+          <p class="forgot"><a href="../USERs/contraseñaOlvidada.html">Olvidaste tu contraseña?</a></p>
 
           <input type="submit" name="login" value="Entrar" class="button button-block" />
 
@@ -105,28 +110,24 @@
 
 </div> <!-- /form -->
 
-
-
 		<div id="main">
 			<div id="content">
 				<section>
 					<div class="container">
-						<h1>Programando poco a poco</h1>
+						<h1>Programación paso a paso</h1>
 
 					</div>
 				</section>
 				<section class="color">
 					<div class="container">
-						<h1>Tutores</h1>
+						<h1>Tutores especificos para cada lenguaje/tema</h1>
 
 					</div>
 
 				</section>
 				<section>
 					<div class="container">
-						<h1>Ejemplos y ejercicios</h1>
-
-
+						<h1>Ejemplos y ejercicios y material</h1>
 					</div>
 				</section>
 			</div>
@@ -140,28 +141,32 @@
 					<ul>
 						<li>CODE.zip/Route</li>
 						<li><a href="#0">Home</a></li>
-						<li><a href="#0">Services</a></li>
-						<li><a href="#0">Contact</a></li>
+
+						<li><a href="javascript:mensajeContact();">Contacto</a></li>
 					</ul>
 				</div>
 				<div  class ="col" id="col-2">
 					<ul>
 						<li>SOCIAL</li>
 						<li><a href="https://www.facebook.com/profile.php?id=100012609097340">Facebook</a></li>
-						<li><a href="#0">Twitter</a></li>
+						<li><a href="javascript:mensajeTwitt();">Twitter</a></li>
 						<li><a href="#0">Youtube</a></li>
 					</ul>
 				</div>
+
+
 				<div  class ="col" id="col-3">
 					<ul>
 						<li>SERVICIOS</li>
-						<li><a href="#0">Ejemplos</a></li>
-						<li><a href="#0">Tutores</a></li>
-						<li><a href="#0">Probelmas</a></li>
-						<li><a href="#0">Proyectos</a></li>
+						<li><a href="javascript:mensajeEmergente();">Ejemplos</a></li>
+						<li><a href="javascript:mensajeEmergente();">Tutores</a></li>
+						<li><a href="javascript:mensajeEmergente();">Problemas</a></li>
+						<li><a href="javascript:mensajeEmergente();">Proyectos</a></li>
 					</ul>
 				</div>
-				<div id="copy">&#xa9; Universidad de Guadalajara, Centro Universitario de Tonalá <a href="http://www.cutonala.udg.mx/oferta-academica/ciencias-computacionales"> ICCO</a>, Noviembre 2018</div>
+
+				<div id="copy">&#xa9; Universidad de Guadalajara, Centro Universitario de Tonalá,
+					<a href="http://www.cutonala.udg.mx/oferta-academica/ciencias-computacionales"> ICCO</a>, Noviembre 2018</div>
 			</div>
 		</footer>
 	</div>
