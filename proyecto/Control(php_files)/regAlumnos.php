@@ -1,6 +1,16 @@
 <?php
 require 'conexion.php';
 
+function verificar_email($email)
+{
+  if(preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@(alumnos.udg.mx)+$/",$email))
+
+  {
+    return true;
+  }
+  return false;
+}
+
 
 if (isset($_POST['registroAl'])) {
   $usuario = $_POST['newNombreRegistro'];
@@ -10,8 +20,9 @@ if (isset($_POST['registroAl'])) {
   $pass = $_POST['newPaswwordRegistro'];
 
   if (empty($usuario) | empty($pass) |empty($nickName) | empty($apellidos) | empty($eMail)){
-    echo '<script type="text/javascript">alert("Ha dejado un campo vacío!")</script>';
-  //	header("Location: ../login.html");
+    echo '<script type="text/javascript">alert("Ha dejado un campo vacío!");
+    location.href="../PAGE-INIT/home.html";</script>';
+  
   	exit();
   	}
     $comprob = "SELECT * from alumnos  where nombreUsuario = '$nickName'";
@@ -20,11 +31,12 @@ if (isset($_POST['registroAl'])) {
 
     if ($result->num_rows > 0)
     		{
-    		echo '<script type="text/javascript">alert("Usuario existente!")</script>';
-      //  header("Location: ../login.html");
+        echo '<script type="text/javascript">alert("Usuario existente!");
+        location.href="../PAGE-INIT/home.html";</script>';
+      
         exit();
-    		}else
-    			{
+    		}else{
+          if (verificar_email($eMail)) {
             $insertUser = "INSERT INTO alumnos (nombreAlumno,apellidosAlumno,nombreUsuario,passAlumno,emailAlumno) VALUES ('$usuario','$apellidos','$nickName','$pass','$eMail')";
             if ($conn->query($insertUser) === TRUE) {
               echo '<script type="text/javascript">alert("Usuario registrado con éxito");
@@ -35,6 +47,11 @@ if (isset($_POST['registroAl'])) {
             else {
                     echo "Error: " . $insertUser . "<br>" . $conn->error;
                 }
+          }else {
+            echo '<script type="text/javascript">alert("El correo insertado no pertenece a UDG!");
+            location.href="../PAGE-INIT/home.html";</script>';
+          }
+
     		}
     }
 
