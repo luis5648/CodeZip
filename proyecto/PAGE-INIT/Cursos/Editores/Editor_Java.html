@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>C & Cpp editor</title>
+    <title>Java editor</title>
     <style type="text/css" media="screen">
         #editor {
             position: absolute;
@@ -15,14 +15,14 @@
 </head>
 <body>
 
-<div id="editor">//Escribe tu código de c o c++ aqui!
-    </div>
+<div id="editor">//Escribe tu código java aqui!
+</div>
 
 <script src="ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
-    editor.session.setMode("ace/mode/c_cpp");
+    editor.session.setMode("ace/mode/java");
 </script>
 </body>
 </html>
