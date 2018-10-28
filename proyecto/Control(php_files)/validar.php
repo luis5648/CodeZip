@@ -19,7 +19,7 @@ if ($result->num_rows > 0)
 		session_start();
 		$_SESSION['usuario'] = $usuario;
             echo '<script> alert("logueo exitoso!");
-        location.href = "../USERs/PerfilUsuario.html" </script>';
+        location.href = "User.php" </script>';
 		}else
 			{
                 echo '<script> alert("Usuario o contraseña incorrectos");

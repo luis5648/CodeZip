@@ -8,11 +8,7 @@
 <script type="text/javascript" src="../JS/js-AboutUs.js"></script>
 <body>
 
-<?php
 
-	if ($conexión = mysql_connect("localhost", "root", "clave")){echo "";
-    $consulta= "SELECT*FROM mensajes";
-    mysql_select_db("web");$datos= mysql_query ($consulta);
 
 
 	<div id="wrapper">
@@ -34,19 +30,33 @@
 					<div class="container">
 					<h1>Perfil de Usuario</h1>
 					<div align="left"><img src="profilePicture.png" width="100" height="100"></div>
-					Email de usuario: echo $fila ["emailAlumno"];
-					<br>
-					Nombre: echo $fila["nombreAlumno"];
-					<br>
-					Apellidos: echo $fila["apellidosAlumno"];
-					<br>
-					Nivel: Apellidos: echo $fila["nivel"];
-					<br>
+                        <?php
+                        require 'conexion.php';
+                        session_start();
+
+                        $user = $_SESSION['usuario'];
+                        $sql = "SELECT nombreAlumno,emailAlumno,apellidosAlumno
+                        from alumnos  where nombreUsuario = '$user'";
+
+                        $result = $conn->query($sql);
+                        $row = $result->fetch_assoc();
+                        ?>
+
+                        <p>Nombre del alumno: <?php echo $row["nombreAlumno"];?>  </p>
+
+					    <br>
+
+                        <p>E-mail registrado: <?php echo $row["emailAlumno"];?> </p>
+
+					    <br>
+
+					    <p>Apellidos: <?php echo $row["apellidosAlumno"];?>  </p>
+
+					    <br>
+					    <br>
 					</div>
 			</div>
 		</div>
-	}else{echo "<p> Error</p>";}?>
-	
 		<footer>
 			<div class="container clearfix">
 				<div class ="col" id="col-1">
