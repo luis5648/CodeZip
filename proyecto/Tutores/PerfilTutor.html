@@ -1,99 +1,71 @@
-<!-- Esto es una plantilla para testing -->
-
-<!doctype html>
-<html lang="latam">
+<!DOCTYPE html>
+<html >
 <head>
-    <meta charset="utf-8">
-    <title>TUTOR</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/style-perfilTutor.css">
+  <meta charset="UTF-8">
+  <title>PANEL TUTORES</title>
+  <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+      <link rel="stylesheet" href="../CSS/style-perfilTutor.css">
+
+
 </head>
 
 <body>
-  <div class="background"></div>
-  <div class="body-wrapper">
-    <div class="panel">
-      <div class="aside">
-        <div class="avatar"><img src="../PIC/01code.jpeg"/></div>
-        <div class="seperator"></div>
-        <div class="list">
-          <div class="item selected">Cuenta</div>
-          <div class="item">Alumnos</div>
-          <div class="item">Ejercicios</div>
-          <div class="item">Proyectos</div>
-          <div class="item">Evaluación</div>
-          <div class="item">Material</div>
-        </div>
-        <div class="log-out">SALIR</div>
-      </div>
-      <div class="view">
-        <div class="sub-title">ADMIN PANEL</div>
-        <div class="main-title">GENERAL</div>
-        <div class="seperator"></div>
-        <div class="health-charts">
-          <div class="chart system">
-            <div class="title">SYSTEM HEALTH</div>
-            <div class="info">
-              <div class="circle"></div>
-              <div class="percentage">75%</div>
-            </div>
-          </div>
-          <div class="chart network">
-            <div class="title">NETWORK HEALTH</div>
-            <div class="info">
-              <div class="circle"></div>
-              <div class="percentage">60%</div>
-            </div>
-          </div>
-          <div class="chart storage">
-            <div class="title">STORAGE HEALTH</div>
-            <div class="info">
-              <div class="circle"></div>
-              <div class="percentage">25%</div>
-            </div>
-          </div>
-          <div class="clear-fix"></div>
-        </div>
-        <div class="min-seperator"></div>
-        <div class="general-settings">
-          <div class="set language">
-            <div class="title">LANGUAGE:</div>
-            <div class="value">
-              <select name="">
-                <option>ENGLISH</option>
-                <option>ARABIC</option>
-                <option>FRENCH</option>
-              </select>
-            </div>
-            <div class="clear-fix"></div>
-          </div>
-          <div class="set date">
-            <div class="title">DATE:</div>
-            <div class="value">
-              <div class="current">9 / 7 / 2016</div>
-              <div class="change">CHANGE</div>
-              <div class="clear-fix"></div>
-            </div>
-            <div class="clear-fix"></div>
-          </div>
-          <div class="set time">
-            <div class="title">TIME:</div>
-            <div class="value">
-              <div class="current">
-                <div class="numbers">02 : 39</div>
-                <div class="extra">AM</div>
-                <div class="clear-fix"></div>
-              </div>
-              <div class="change">CHANGE</div>
-              <div class="clear-fix"></div>
-            </div>
-            <div class="clear-fix"></div>
-          </div>
-        </div>
-      </div>
-      <div class="clear-fix"></div>
-    </div>
-  </div>
+  <div class="wrapper">
+<header>
+  <h1>PANEL TUTOR</h1>
 
+</header>
+<nav>
+    <ul>
+      <li class="gnav1">GENERAL</li>
+      <li class="gnav2">ALUMNOS</li>
+      <li class="gnav3">PROYECTOS</li>
+      <li class="gnav4">MATERIAL</li>
+    </ul>
+</nav>
+<div class="contents" id="contents">
+<div class="container">
+<article id="page1" class="show top">
+  <section>
+    <h1>Datos generales</h1>
+    <p>datos principales del tutor</p>
+  </section>
+</article>
+<article id="page2">
+  <section>
+    <h1>Alumnos en tutoria</h1>
+    <p>This is tab two.</p>
+  </section>
+</article>
+<article id="page3">
+  <section>
+    <h1>Proyectos disponibles</h1>
+    <p>This is tab three.</p>
+  </section>
+</article>
+<article id="page4">
+  <section>
+    <h1>Material, videos, PDF's</h1>
+    <p>This is tab four.</p>
+  </section>
+</article>
+<article id="page5">
+  <section>
+    <h1>Tab5 Title</h1>
+    <p>This is tab five</p>
+  </section>
+</article>
+</div>
+</div>
+</div>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+
+    <script src="../JS/js-AdminPanel.js"></script>
 
 </body>
+<button type="button" class="exit"name="button">SALIR</button>
 </html>
