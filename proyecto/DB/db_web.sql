@@ -39,8 +39,10 @@ create table tutores(
 create table problemas(
   idProblema int primary key not null auto_increment,
   nombreProblema varchar(25),
-  lenguaje varchar(25),
-  enunciado text
+  lenguaje int,
+  enunciado text,
+
+  foreign key (lenguaje) references cursos(idCurso)
 );
 
 
@@ -59,10 +61,31 @@ create table problemasSoluc(
 );
 
 insert into cursos values (1,'Java');
-insert into cursos values (2,'Python');
-insert into cursos values (3,'C, C++');
+insert into cursos values (2,'C');
+insert into cursos values (3,'C++');
+
+
+
 
 
 insert  into tutores values (1,'josé','ap1','ap2','123','nick','2');
 insert into alumnos values (1,'Luis','ap1','user1','12345','123@123.com',1,1);
 
+-- problemas por defecto:
+
+-- c:
+
+insert into problemas  values ('3','triangulo_2','2','Implementar un programa que calcule el área de un triángulo usando variables int nombradas
+"areaTriangulo", "base" y "altura". No es necesario solicitar datos al usuario, pero es aceptable.');
+
+insert into problemas values ('2','circulo_1','2','Implementar un programa que calcule el área de un círculo usando variables float nombradas
+"a", "r" y "pi" ');
+
+insert into problemas values ('1','triangulo_1','2','Implementar un programa que calcule el área de un triángulo usando variables int nombradas
+"a", "b" y "h". No es necesario solicitar datos al usuario, pero es aceptable igual. ');
+
+-- java:
+
+insert into problemas values ('4','circuloj_1','1','Pedir el radio de un círculo y calcular su área. A=PI*r^2.');
+insert into problemas values ('5','circuloj_2','1','Pedir el radio de una circunferencia y calcular su longitud.');
+insert into problemas values ('6','validacionj_1','1','Pedir dos números y decir si son iguales o no.');
