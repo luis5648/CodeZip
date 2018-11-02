@@ -49,10 +49,12 @@
 
 $iteradorProblemas =1;
 if (isset($_POST['sig'])){
-    $iteradorProblemas++;
+    $iteradorProblemas = $_POST["conta"]+1;
+}else {
+  $iteradorProblemas =1;
 }
 
-$gen = "SELECT enunciado FROM problemas WHERE idProblema = '$iteradorProblemas'";
+$gen = "SELECT enunciado FROM problemas WHERE idProblema = '$iteradorProblemas' and lenguaje = '2'";
 $resp = $conn->query($gen);
 $rowen = $resp->fetch_assoc();
 
@@ -71,7 +73,8 @@ $rowen = $resp->fetch_assoc();
 
 
             <div class="problema">
-                <textArea readonly cols="20" rows="10" class="enum" name="prob">Problema: <?php echo $rowen['enunciado']?> </textArea>
+              <input type="hidden" name="conta" value="<?=$iteradorProblemas ?>">
+                <textArea readonly cols="20" rows="10" class="enum" name="prob">Problema <?php echo $rowen['enunciado']; ?> </textArea>
                 <div class="enviar-recivir">
                     <button class="enviar" type="submit" name="enviar">Enviar solución!</button>
                     <button class="siguiente" type="submit" name="sig">Siguiente problema</button>
