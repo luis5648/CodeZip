@@ -2,7 +2,7 @@
 .form {
   position: relative;
   z-index: 1;
-  background: #FFFFFF;
+  background: rgb(100, 41, 41);
   max-width: 300px;
   margin: 0 auto 100px;
   padding: 30px;
@@ -109,7 +109,7 @@
 /* Demo Purposes */
 body {
   /*background: #ccc;*/
-  background-color: green;
+  background-color: rgb(105, 29, 24);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -120,7 +120,7 @@ body:before {
   top: 0;
   left: 0;
   display: block;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(144, 230, 159, 0.8);
   width: 100%;
   height: 100%;
 }

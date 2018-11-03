@@ -19,6 +19,7 @@ body {
   background: #f0f0f0;
   position: relative;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  
 }
 
 header h1 {
@@ -30,13 +31,29 @@ header h1 {
   position: relative;
   z-index: 8;
 }
-.exit{
-  position: relative;
-  background-color: darkgray;
-  color: red;
-  float: left;
 
+
+.exit {
+  color:black;
+  cursor: pointer;
+  display: block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px; 
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%; 
+  float: right;
 }
+
+.exit:hover{
+  background-color:red;
+  color: #fff;
+}
+
 
 nav {
   width: 100%;

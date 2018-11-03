@@ -1,4 +1,11 @@
-
+.img-Logo{
+    width:120px;
+    height:100px;
+    margin-left:15px;
+    float: left;
+	border-radius: 30%;
+	
+}
 header.smaller {
 	height: 75px;
 }
