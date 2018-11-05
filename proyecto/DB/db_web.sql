@@ -66,3 +66,12 @@ insert into cursos values (3,'C, C++');
 insert  into tutores values (1,'josé','ap1','ap2','123','nick','2');
 insert into alumnos values (1,'Luis','ap1','user1','12345','123@123.com',1,1);
 
+  INSERT INTO web.problemas (nombreProblema, lenguaje, enunciado) VALUES ('triangulo_1', 2, 'Implementar un programa que calcule el área de un triángulo usando variables int nombradas
+  "a", "b" y "h". No es necesario solicitar datos al usuario, pero es aceptable igual. ');
+  INSERT INTO web.problemas (nombreProblema, lenguaje, enunciado) VALUES ('circulo_1', 2, 'Implementar un programa que calcule el área de un círculo usando variables float nombradas
+  "a", "r" y "pi" ');
+  INSERT INTO web.problemas (nombreProblema, lenguaje, enunciado) VALUES ('triangulo_2', 2, 'Implementar un programa que calcule el área de un triángulo usando variables int nombradas
+  "areaTriangulo", "base" y "altura". No es necesario solicitar datos al usuario, pero es aceptable.');
+  INSERT INTO web.problemas (nombreProblema, lenguaje, enunciado) VALUES ('circuloj_1', 1, 'Pedir el radio de un círculo y calcular su área. A=PI*r^2.');
+  INSERT INTO web.problemas (nombreProblema, lenguaje, enunciado) VALUES ('circuloj_2', 1, 'Pedir el radio de una circunferencia y calcular su longitud.');
+  INSERT INTO web.problemas (nombreProblema, lenguaje, enunciado) VALUES ('validacionj_1', 1, 'Pedir dos números y decir si son iguales o no.');

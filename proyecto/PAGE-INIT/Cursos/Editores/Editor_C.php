@@ -51,23 +51,49 @@ $iteradorProblemas =1;
 if (isset($_POST['sig'])){
     $iteradorProblemas = $_POST["conta"]+1;
 }else {
-  //$iteradorProblemas =1;
+  $iteradorProblemas =1;
 }
 
-$gen = "SELECT enunciado FROM problemas WHERE idProblema = '$iteradorProblemas' and lenguaje = '2'";
+$gen = "SELECT * FROM problemas WHERE idProblema = '$iteradorProblemas' and lenguaje = '2'";
 $resp = $conn->query($gen);
 $rowen = $resp->fetch_assoc();
 
- if (isset($_POST['enviar'])){
-     $enunciado = $_POST['edit'];
 
- }
+if (isset($_POST['enviar'])){
+    session_start();
+
+    $solucion = $_REQUEST['TAedit'];
+    $probID = $rowen['idProblema'];
+
+    $user = $_SESSION['usuario'];
+
+    $sql1 = "SELECT * FROM alumnos WHERE nombreAlumno = '$user'";
+    $r = $conn->query($sql1);
+    $alumnoInfo = $r->fetch_assoc();
+
+    $idAlumno = $alumnoInfo['idAlumno'];
+
+    $insertSolc = "INSERT INTO problemasSoluc (idProblema,solucion,idAlumno) VALUES ('$probID','$solucion','$idAlumno') ";
+
+    if ($conn->query($insertSolc) === TRUE) {
+        echo '<script type="text/javascript">alert("Solucion enviada para calificar!");
+                location.href="../PAGE-INIT/home.html";</script>';
+
+        exit();
+    }
+    else {
+        echo "Error: " . $insertUser . "<br>" . $conn->error;
+    }
+}
 
 
 ?>
 <form action="" method="post">
-    <div id="editor" name="edit">//Escribe tu código de c o c++ aqui!
+    <div id="editor" ><textarea name="TAedit">//Escribe tu código de c o c++ aqui!
+
+        </textarea>
     </div>
+
 
 
 
