@@ -18,7 +18,7 @@ if ($result->num_rows > 0)
 		{
 		session_start();
 		$_SESSION['usuario'] = $usuario;
-            echo '<script> alert("logueo exitoso!");
+            echo '<script> alert("\tBienvenido !");
         location.href = "User.php" </script>';
 		}else
 			{

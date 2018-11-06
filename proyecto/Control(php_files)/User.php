@@ -7,27 +7,24 @@
 <link rel="stylesheet" type="text/css" href="../CSS/style-perfilUser.css">
 <script type="text/javascript" src="../JS/js-UserPerfil.js"></script>
 <body>
-
 <div id="wrapper">
-<br>
-	
-<div>
-		<header id="js-header">
-			<div class="container clearfix"><br>
-			<img src="../PIC/01code.jpeg" alt="" class="img-Logo">	
-			<h1 id="logo">CODE.zip</h1>	
+
+			<div id="P01">
+				<header id="js-header">
+				<img src="../PIC/01code.jpeg" alt="" class="img-Logo">	
+				<h1 id="logo">CODE.zip</h1>	
 			</div>
 		</header>
 </div>	
 
-<br><br><br><br>
+
 <form action="../Control(php_files)/cerrar.php">
      <button type="submit" class="exit"name="botonSalir1">SALIR</button>
     </form>
 <div class="tab">
-  <button class="tablinks" onclick="abrirContenido(event, 'perfilUsuario')">Perfil</button>
-  <button class="tablinks" onclick="abrirContenido(event, 'cursosUsuario')">Cursos</button>
-  <button class="tablinks" onclick="abrirContenido(event, 'material')">Material</button>
+  <button class="tablinks" id="T01" onclick="abrirContenido(event, 'perfilUsuario')">Perfil</button>
+  <button class="tablinks" id="T02" onclick="abrirContenido(event, 'cursosUsuario')">Cursos</button>
+  <button class="tablinks" id="T03" onclick="abrirContenido(event, 'material')">Material</button>
 </div>
 
 <br><br>
@@ -53,32 +50,89 @@
 								<p>Nombre del alumno: <?php echo $row["nombreAlumno"];?>  </p>
 								<p>E-mail registrado: <?php echo $row["emailAlumno"];?> </p>
 								<p>Apellidos: <?php echo $row["apellidosAlumno"];?>  </p>
+								<p>Curso actual :									</p>
+								<!--	PONER QUERY DE CURSO ACTUAL (SI LO HAY) -->
 							</div>  
 					</div>
 
 
 
-					<div id="cursosUsuario" class="tabcontent">
+					<div id="cursosUsuario" class="tabcontent" >
 						<div class="container">
 						<h3>Cursos disponibles</h3>
 
-		
+			
+
+						<p>
+						<img src="../PIC/icon-C-code.png" alt="Icon" style="float:left;width:33px;height:33px;">
+						<a href="../PAGE-INIT/Cursos/C.html">Curso de C</a>
+						</p>
+						
+						<p>
+						<img src="../PIC/icon-C++-code.png" alt="Icon" style="float:left;width:33px;height:33px;">
+						<a href="../PAGE-INIT/Cursos/C++.html">Curso de C++</a>
+						</p>
+						<p>
+						<img src="../PIC/icon-Java-code.png" alt="Icon" style="float:left;width:30px;height:30px;">
+						<a href="../PAGE-INIT/Cursos/Java-basico.html">Curso de Java [nivel básico]</a>
+						</p>
+						<p>
+						<img src="../PIC/icon-Java-code.png" alt="Icon" style="float:left;width:30px;height:30px;">
+						<a href="../PAGE-INIT/Cursos/Java-medio.html">Curso de Java [nivel medio]</a>
+						</p>
+						<p>
+						<img src="../PIC/icon-Java-code.png" alt="Icon" style="float:left;width:30px;height:30px;">
+						<a href="../PAGE-INIT/Cursos/Java-complejo.html">Curso de Java [nivel complejo]</a>
+						</p>
+
+					
+						
+					
 						</div>
 					</div>
 
 
 
 					<div id="material" class="tabcontent">
+
+
+
+
+					<div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> CERRAR &times;</a>
+					<a href="#P01" onclick="closeNav()">Inicio [Material]</a>
+					<a href="#dataC" onclick="closeNav()">Archivos de C</a>
+					<a href="#dataC++" onclick="closeNav()">Archivos de C++</a>
+					<a href="#dataJava1" onclick="closeNav()">Archivos de Java [Parte 1]</a>
+					<a href="#dataJava2" onclick="closeNav()">Archivos de Java [Parte 2]</a>
+					<a href="#dataJava3" onclick="closeNav()">Archivos de Java [Parte 3]</a>
+					<a href="#dataJava4" onclick="closeNav()">Archivos de Java [Parte 4]</a>
+					<a href="#dataJava5" onclick="closeNav()">Archivos de Java [Parte 5]</a>
+					<a href="#dataJava6" onclick="closeNav()">Archivos de Java [Parte 6]</a>
+					<a href="#dataJava7" onclick="closeNav()">Archivos de Java [Parte 7]</a>
+					<a href="#dataJava8" onclick="closeNav()">Archivos de Java [Parte 8]</a>
+					<a href="#dataJava9a" onclick="closeNav()">Archivos de Java [Parte 9] (DOCX I)</a>
+					<a href="#dataJava9b" onclick="closeNav()">Archivos de Java [Parte 9] (DOCX II)</a>
+					<a href="#dataJava9c" onclick="closeNav()">Archivos de Java [Parte 9] (DOCX III)</a>
+					</div>
+
+
+
+
+
+
+
+
 						
 						<div class="container">
-					
+						<span  class="spanBtn"style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menú explorador</span>
 						<h3>Material academico disponible</h3>
 						<p>Actualmente se cuenta con una colección de libros/PDF's (LINKS) virtuales
 						 con fines academicos no lucrativos ni con fines de reproducción, copia
 						 o cualquier otra manipulación que manipule las obras.</p>
 						<br>
 						
-						<h3>Archivos de C</h3>
+						<h3 id="dataC">Archivos de C</h3>
 						<p>
 						<img src="../PIC/icon-PDF.png" alt="Icon" style="float:left;width:30px;height:30px;">
 						<a href="https://mega.nz/#F!c9dRwY6I!tfgvONOPDljfK68MuQs5Wg!ooti0SgY" target="_blank">Lenguaje C</a>
@@ -119,7 +173,7 @@
 
 
 
-						<h3>Archivos de C++</h3>
+						<h3 id="dataC++">Archivos de C++</h3>
 						<p>
 						<img src="../PIC/icon-PDF.png" alt="Icon" style="float:left;width:30px;height:30px;">
 						<a href="https://mega.nz/#F!c9dRwY6I!tfgvONOPDljfK68MuQs5Wg!llE2wTSY" target="_blank">Como programar en C++, [9na Edi. Deitel]</a>
@@ -167,11 +221,11 @@
 						<br>
 						
 
-						<h3>Archivos de Java</h3>
+						<h3 id="dataJava1">Archivos de Java</h3>
 						
 						
 						<ul type="list-style-type:disc">
-						<li class="part">Parte 1</li> <!-- PARTE 1 DE LIBROS-->
+						<li class="part" >Parte 1</li> <!-- PARTE 1 DE LIBROS-->
 						
 						<p>
 						<img src="../PIC/icon-PDF.png" alt="Icon" style="float:left;width:30px;height:30px;">
@@ -211,7 +265,7 @@
 						</p>
 
 
-						<li class="part">Parte 2</li> <!-- PARTE 2 DE LIBROS-->
+						<li class="part" id="dataJava2">Parte 2</li> <!-- PARTE 2 DE LIBROS-->
 						<p>
 						<img src="../PIC/icon-PDF.png" alt="Icon" style="float:left;width:30px;height:30px;">
 						<a href="https://mega.nz/#F!c9dRwY6I!tfgvONOPDljfK68MuQs5Wg!IkUBTQrC?kgcFzIyD" target="_blank">Programación Andriod con Java</a>
@@ -250,7 +304,7 @@
 						</p>
 
 
-						<li class="part">Parte 3</li> <!-- PARTE 3 DE LIBROS-->
+						<li class="part" id="dataJava3">Parte 3</li> <!-- PARTE 3 DE LIBROS-->
 						<p>
 						<img src="../PIC/icon-PDF.png" alt="Icon" style="float:left;width:30px;height:30px;">
 						<a href="https://mega.nz/#F!c9dRwY6I!tfgvONOPDljfK68MuQs5Wg!w8lwjSjB?QgFnmASR" target="_blank">Aprenda Servlets de Java</a>
@@ -289,7 +343,7 @@
 						</p>
 
 
-						<li class="part">Parte 4</li> <!-- PARTE 4 DE LIBROS-->
+						<li class="part" id="dataJava4">Parte 4</li> <!-- PARTE 4 DE LIBROS-->
 						<p>
 						<img src="../PIC/icon-PDF.png" alt="Icon" style="float:left;width:30px;height:30px;">
 						<a href="https://mega.nz/#F!c9dRwY6I!tfgvONOPDljfK68MuQs5Wg!w8lwjSjB?Yp8yCDIA" target="_blank">Programación multihebra en Java</a>
@@ -328,7 +382,7 @@
 						</p>
 						<br><br>
 
-						<li class="part">Parte 5</li> <!-- PARTE 5 DE LIBROS-->
+						<li class="part" id="dataJava5">Parte 5</li> <!-- PARTE 5 DE LIBROS-->
 						<p>
 						<img src="../PIC/icon-PDF.png" alt="Icon" style="float:left;width:30px;height:30px;">
 						<a href="https://mega.nz/#F!c9dRwY6I!tfgvONOPDljfK68MuQs5Wg!Jp1XgDbB?NwsyibbT" target="_blank">Como empezar a programar en Java</a>
@@ -369,7 +423,7 @@
 
 
 
-						<li class="part">Parte 6 [Java y estructuras de datos]</li> <!-- PARTE 6 DE LIBROS-->
+						<li class="part" id="dataJava6">Parte 6 [Java y estructuras de datos]</li> <!-- PARTE 6 DE LIBROS-->
 						<p>
 						<img src="../PIC/icon-PDF.png" alt="Icon" style="float:left;width:30px;height:30px;">
 						<a href="https://mega.nz/#F!c9dRwY6I!tfgvONOPDljfK68MuQs5Wg!sxUDVZYA?p11TXQgS" target="_blank">Unidad I [antecedentes]</a>
@@ -394,7 +448,7 @@
 						<br><br>
 
 
-						<li class="part">Parte 7 [Java Illuminated]</li> <!-- PARTE 7 DE LIBROS-->
+						<li class="part" id="dataJava7">Parte 7 [Java Illuminated]</li> <!-- PARTE 7 DE LIBROS-->
 						<p>
 						<img src="../PIC/icon-PDF.png" alt="Icon" style="float:left;width:30px;height:30px;">
 						<a href="https://mega.nz/#F!c9dRwY6I!tfgvONOPDljfK68MuQs5Wg!Jl9VjbCB?4plD0JSC" target="_blank">Unidad I</a>
@@ -458,7 +512,7 @@
 
 
 
-						<li class="part">Parte 8 [Java con Neatbeans]</li> <!-- PARTE 8 DE LIBROS-->
+						<li class="part" id="dataJava8">Parte 8 [Java con Neatbeans]</li> <!-- PARTE 8 DE LIBROS-->
 						<p>
 						<img src="../PIC/icon-PDF.png" alt="Icon" style="float:left;width:30px;height:30px;">
 						<a href="https://mega.nz/#F!c9dRwY6I!tfgvONOPDljfK68MuQs5Wg!UwN0AC7I?Ax8jFLqC" target="_blank">Tema 1 - POO</a>
@@ -524,7 +578,7 @@
 
 
 
-						<li class="part">Parte 9 [secciones DOCX]</li></ul>
+						<li class="part" id="dataJava9a">Parte 9 [secciones DOCX]</li></ul>
 						<ul style="list-style-type:none">
 						<li class="partDoc">Sección DOCX I</li>
 						<p>
@@ -564,7 +618,7 @@
 							<a href="https://mega.nz/#F!c9dRwY6I!tfgvONOPDljfK68MuQs5Wg!w8lwjSjB?FhUUUIQK" target="_blank">Iteración sobre colecciones [Java]</a>
 						</p>
 						
-						<li class="partDoc">Sección DOCX II</li>
+						<li class="partDoc" id="dataJava9b">Sección DOCX II</li>
 						<p>
 							<img src="../PIC/icon-DOCX.png" alt="Icon2"style="float:left;width:33px;height:33px;" >
 							<a href="https://mega.nz/#F!c9dRwY6I!tfgvONOPDljfK68MuQs5Wg!w8lwjSjB?o8lixKgT" target="_blank">TIpos ENUM [Java]</a>
@@ -602,7 +656,7 @@
 							<a href="https://mega.nz/#F!c9dRwY6I!tfgvONOPDljfK68MuQs5Wg!w8lwjSjB?EpcQybZC" target="_blank">Componentes AWT [Java]</a>
 						</p>
 
-					<li class="partDoc">Sección DOCX III</li>
+					<li class="partDoc" id="dataJava9c">Sección DOCX III</li>
 						<p>
 							<img src="../PIC/icon-DOCX.png" alt="Icon2"style="float:left;width:33px;height:33px;" >
 							<a href="https://mega.nz/#F!c9dRwY6I!tfgvONOPDljfK68MuQs5Wg!w8lwjSjB?Q18ykLTb" target="_blank">AWT Menú [Java]</a>
@@ -645,8 +699,8 @@
 	<div class="container clearfix">
 		<div class ="col" id="col-1">
 						<ul>
-						<li>CODE.zip/Route</li>
-						<li><a href="home.html">Home</a></li>
+						<li>CODE.zip</li>
+						<li><a href="javascript:IraHome();">Home</a></li>
 
 						<li><a href="javascript:mensajeContact();">Contacto</a></li>
 						</ul>
@@ -664,10 +718,10 @@
 		<div  class ="col" id="col-3">
 					<ul>
 						<li>SERVICIOS</li>
-						<li><a href="javascript:mensajeEmergente();">Ejemplos</a></li>
-						<li><a href="javascript:mensajeEmergente();">Tutores</a></li>
-						<li><a href="javascript:mensajeEmergente();">Problemas</a></li>
-						<li><a href="javascript:mensajeEmergente();">Proyectos</a></li>
+						<li><a href="javascript:clickPerfilUser();">Perfil</a></li>
+						<li><a href="javascript:clickCurso();">Cursos</a></li>
+						<li><a href="javascript:clickMaterial();">Material</a></li>
+						
 					</ul>
 		</div>
 			<div id="copy">&#xa9; Universidad de Guadalajara, Centro Universitario de Tonalá <a href=""> ICCO</a>, Noviembre 2018</div>

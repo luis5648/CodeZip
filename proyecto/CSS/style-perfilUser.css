@@ -7,6 +7,8 @@ body {
 	font-size: 16px;
     line-height: 1.8;
     
+
+    transition: background-color .5s;
 }
 
 
@@ -47,6 +49,17 @@ body {
 }
 
 /* Style the buttons inside the tab */
+
+.spanBtn{
+    
+            float: right;
+            position: fixed;
+			bottom: 0;
+			right: 0;
+            width: 300px;
+            color: #49ACAE;
+
+}
 .tab button {
     background-color: inherit;
     float: left;
@@ -56,6 +69,7 @@ body {
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 17px;
+    
 }
 
 /* Change background color of buttons on hover */
@@ -77,6 +91,13 @@ body {
   
 }
 
+
+
+
+
+
+
+
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
     from {opacity: 0;}
@@ -89,21 +110,7 @@ body {
 }
 
 
-header.smaller {
-	height: 75px;
-}
 
-header.smaller h1#logo {
-	width: 150px;
-	height: 75px;
-	line-height: 55px;
-	font-size: 55px;
-	margin: 0;
-}
-
-header.smaller nav a {
-	line-height: 75px;
-}
 *,
 *:before,
 *:after {
@@ -145,7 +152,8 @@ a:hover {
 
 #wrapper {
 	width: 100%;
-	margin: 0 auto;
+    margin: 0 auto;
+    
 
 }
 
@@ -153,8 +161,57 @@ a:hover {
 	/*background-color: #fff;*/
 	background-color: #C4C4C7;
 	padding-top: 150px;
-  	min-height:500px;
+      min-height:500px;
+      
+      transition: margin-left .5s;
+      padding: 16px;
 }
+
+
+ /*NAV BLACK INIT*/
+ @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 20px;
+    margin-left: 50px;
+    color: #C0392B;
+    text-decoration: underline;
+    
+}
+
+
+/*NAV BLACK finish*/
 
 .container {
 	width: 90%;
@@ -166,7 +223,7 @@ a:hover {
         width: 100%;
         height: 10em;
         overflow: hidden;
-        position: fixed;
+        /*position: fixed;*/
         top: 0;
         left: 0;
         z-index: 999;
@@ -334,63 +391,3 @@ a:hover {
             display: block;
         }
     }
-
-
-
-
-    .sidebar {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #111;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-    }
-    
-    .sidebar a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-    }
-    
-    .sidebar a:hover {
-        color: #f1f1f1;
-    }
-    
-    .sidebar .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-right: 50px;
-    }
-    
-    .openbtn {
-        font-size: 20px;
-        cursor: pointer;
-        background-color: #111;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-    }
-    
-    .openbtn:hover {
-        background-color: #444;
-    }
-    
-    #mainR {
-        transition: margin-left .5s;
-        padding: 16px;
-    }
-    @media screen and (max-height: 450px) {
-        .sidebar {padding-top: 15px;}
-        .sidebar a {font-size: 18px;}
-    }
-
