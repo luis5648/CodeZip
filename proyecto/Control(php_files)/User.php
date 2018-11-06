@@ -65,24 +65,24 @@
 
 						<p>
 						<img src="../PIC/icon-C-code.png" alt="Icon" style="float:left;width:33px;height:33px;">
-						<a href="../PAGE-INIT/Cursos/C.html">Curso de C</a>
+						<a href="../PAGE-INIT/Cursos/C.html" target="_blank">Curso de C</a>
 						</p>
 						
 						<p>
 						<img src="../PIC/icon-C++-code.png" alt="Icon" style="float:left;width:33px;height:33px;">
-						<a href="../PAGE-INIT/Cursos/C++.html">Curso de C++</a>
+						<a href="../PAGE-INIT/Cursos/C++.html" target="_blank">Curso de C++</a>
 						</p>
 						<p>
-						<img src="../PIC/icon-Java-code.png" alt="Icon" style="float:left;width:30px;height:30px;">
-						<a href="../PAGE-INIT/Cursos/Java-basico.html">Curso de Java [nivel básico]</a>
+						<img src="../PIC/icon-Java-code.png" alt="Icon" style="float:left;width:30px;height:30px;target="_blank"">
+						<a href="../PAGE-INIT/Cursos/Java-basico.html" target="_blank">Curso de Java [nivel básico]</a>
 						</p>
 						<p>
-						<img src="../PIC/icon-Java-code.png" alt="Icon" style="float:left;width:30px;height:30px;">
-						<a href="../PAGE-INIT/Cursos/Java-medio.html">Curso de Java [nivel medio]</a>
+						<img src="../PIC/icon-Java-code.png" alt="Icon" style="float:left;width:30px;height:30px;target="_blank"">
+						<a href="../PAGE-INIT/Cursos/Java-medio.html"target="_blank" >Curso de Java [nivel medio]</a>
 						</p>
 						<p>
-						<img src="../PIC/icon-Java-code.png" alt="Icon" style="float:left;width:30px;height:30px;">
-						<a href="../PAGE-INIT/Cursos/Java-complejo.html">Curso de Java [nivel complejo]</a>
+						<img src="../PIC/icon-Java-code.png" alt="Icon" style="float:left;width:30px;height:30px;target="_blank"">
+						<a href="../PAGE-INIT/Cursos/Java-complejo.html" target="_blank">Curso de Java [nivel complejo]</a>
 						</p>
 
 					
