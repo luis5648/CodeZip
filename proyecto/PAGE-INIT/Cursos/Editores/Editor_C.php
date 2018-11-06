@@ -6,7 +6,7 @@
     <style type="text/css" media="screen">
         #editor {
             position: absolute;
-            top: 0;
+            top: 10%;
             right: 0;
             bottom: 40%;
             left: 0;
@@ -59,40 +59,36 @@ $resp = $conn->query($gen);
 $rowen = $resp->fetch_assoc();
 
 
-if (isset($_POST['enviar'])){
-    session_start();
 
-    $solucion = $_REQUEST['TAedit'];
-    $probID = $rowen['idProblema'];
+?>
+<!-- Prueba para escribir archivos con php -->
+<?php
+/*$nombreArchivo = $_POST['archNam'];
+    $ar =fopen($nombreArchivo,"a")
+    or die("no se pudo crear el archivo");
 
-    $user = $_SESSION['usuario'];
-
-    $sql1 = "SELECT * FROM alumnos WHERE nombreAlumno = '$user'";
-    $r = $conn->query($sql1);
-    $alumnoInfo = $r->fetch_assoc();
-
-    $idAlumno = $alumnoInfo['idAlumno'];
-
-    $insertSolc = "INSERT INTO problemasSoluc (idProblema,solucion,idAlumno) VALUES ('$probID','$solucion','$idAlumno') ";
-
-    if ($conn->query($insertSolc) === TRUE) {
-        echo '<script type="text/javascript">alert("Solucion enviada para calificar!");
-                location.href="../PAGE-INIT/home.html";</script>';
-
-        exit();
-    }
-    else {
-        echo "Error: " . $insertUser . "<br>" . $conn->error;
-    }
-}
+    fwrite(ar,$_POST['TAedit']);
+    fclose(ar);
+*/
 
 
 ?>
-<form action="" method="post">
+
+
+<form action="../../../Control(php_files)/subirProblemas.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="archivo">
+    <button>subir codigo</button>
     <div id="editor" ><textarea name="TAedit">//Escribe tu código de c o c++ aqui!
 
         </textarea>
     </div>
+
+</form>
+
+
+
+<form action=""  method="post">
+
 
 
 
@@ -101,7 +97,7 @@ if (isset($_POST['enviar'])){
               <input type="hidden" name="conta" value="<?=$iteradorProblemas ?>">
                 <textArea readonly cols="20" rows="10" class="enum" name="prob">Problema: <?php echo $iteradorProblemas;?> <?php echo $rowen['enunciado']; ?> </textArea>
                 <div class="enviar-recivir">
-                    <button class="enviar" type="submit" name="enviar">Enviar solución!</button>
+
                     <button class="siguiente" type="submit" name="sig">Siguiente problema</button>
                 </div>
             </div>
