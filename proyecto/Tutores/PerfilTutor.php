@@ -12,13 +12,33 @@
      <button type="submit" class="exit"name="botonSalir1">SALIR</button>
     </form>
     <br><br><br><br>
-   
+
 </head>
 
+<?php
+
+    require "../Control(php_files)/conexion.php";
+    session_start();
+
+    $user = $_SESSION['tutorLog'];
+    $sql = "SELECT *
+    from tutores  where nombreUsuario = '$user'";
+
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+
+    $especialidad = "SELECT nombreLenguaje from tutores
+    inner join cursos on tutores.especialidad = cursos.idCurso
+    where tutores.nombreUsuario = '$user'";
+
+    $espRes = $conn->query($especialidad);
+    $espFil = $espRes->fetch_assoc();
+
+ ?>
 <body>
   <div class="wrapper">
 <header>
-    
+
   <h1>PANEL TUTOR</h1>
 
 </header>
@@ -35,13 +55,31 @@
 <article id="page1" class="show top">
   <section>
     <h1>Datos generales</h1>
-    <p>datos principales del tutor</p>
+
+      <p>Nombre completo: <?php echo $row['nombreTutor'];
+      echo " ";
+      echo $row['apellidoPaterno'];
+      echo " ";
+      echo $row['apellidoMaterno'];
+      ?></p>
+      <br><br>
+      <p>Especialidad: Lenguaje <?php echo $espFil['nombreLenguaje'] ?></p>
+
   </section>
 </article>
 <article id="page2">
   <section>
     <h1>Alumnos en tutoria</h1>
-    <p>This is tab two.</p>
+    <h3>problemas subidos por los alumnos: </h3>
+    <br><br>
+
+    <?php
+      require "../Control(php_files)/vistaDirTutor.php";
+      echo obtener_estructura_directorios("../Control(php_files)/Soluciones");
+
+     ?>
+     <br><br>
+     <a href="../Control(php_files)/Soluciones">ir a carpeta...</a>
   </section>
 </article>
 <article id="page3">

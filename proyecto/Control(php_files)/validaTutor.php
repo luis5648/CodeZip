@@ -20,14 +20,15 @@ if (isset($_POST['logTutor'])){
 
     if($result->num_rows>0){
         session_start();
-        $_SESSION['usuario'] = $userTutor;
-        echo '<script> alert("logueo exitoso!");
-        location.href = "../Tutores/PerfilTutor.html" </script>';
+        $_SESSION['tutorLog'] = $userTutor;
+        echo '<script> alert("bienvenido!");
+        location.href = "../Tutores/PerfilTutor.php" </script>';
 
     }else{
         //falló al autentificar
-        header( "Location ../Tutores/loginTutor.html");
+        echo '<script> alert("El usuario o la contraseña no son correctos!");
+        location.href = "../Tutores/loginTutor.html" </script>';
+        //header( "Location ../Tutores/loginTutor.html");
         exit();
     }
 }
-
