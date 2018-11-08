@@ -78,8 +78,10 @@
       echo obtener_estructura_directorios("../Control(php_files)/Soluciones");
 
      ?>
-     <br><br>
-     <a href="../Control(php_files)/Soluciones">ir a carpeta...</a>
+      <hr>
+      <br><br><br><br>
+    <p>Subir una corrección: </p>
+      <input type="file" name="correccion">
   </section>
 </article>
 <article id="page3">

@@ -8,8 +8,8 @@ function obtener_estructura_directorios($ruta){
         $archivo = scandir($ruta);
 
         for ($i=2;$i<count($archivo);$i++){
-
-            echo "<a href='$ruta/'><li>.$archivo[$i].</li></a>";
+            $r = $ruta."/".$archivo[$i];
+            echo "<a href=$r><li>.$archivo[$i].</li></a>";
         }
 
         /*
