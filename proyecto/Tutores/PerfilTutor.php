@@ -70,7 +70,16 @@
 <article id="page2">
   <section>
     <h1>Alumnos en tutoria</h1>
-    <p>This is tab two.</p>
+    <h3>problemas subidos por los alumnos: </h3>
+    <br><br>
+
+    <?php
+      require "../Control(php_files)/vistaDirTutor.php";
+      echo obtener_estructura_directorios("../Control(php_files)/Soluciones");
+
+     ?>
+     <br><br>
+     <a href="../Control(php_files)/Soluciones">ir a carpeta...</a>
   </section>
 </article>
 <article id="page3">
