@@ -12,7 +12,8 @@
     Para subir una corrección, se debe hacer click en
     el botón "subir archivo" del panel de alumnos. Se
     debe seleccionar el archivo de código ya corregido
-    nombrado como se dio a conocer con anterioridad.
+    nombrado como se dio a conocer con anterioridad y
+    dar click en el botón "subir...".
 
 3.- ¿Cómo queda guardada una corrección una vez subida?
     una corrección, después de haberse subido, queda
