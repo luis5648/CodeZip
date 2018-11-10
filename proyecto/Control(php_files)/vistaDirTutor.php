@@ -1,3 +1,9 @@
+<style>
+    .arLi{
+        color: cyan;
+        list-style-type: disc;
+    }
+</style>
 <?php
 function obtener_estructura_directorios($ruta){
     // Se comprueba que realmente sea la ruta de un directorio
@@ -6,10 +12,9 @@ function obtener_estructura_directorios($ruta){
         //$gestor = opendir($ruta);
         echo "<ul>";
         $archivo = scandir($ruta);
-
         for ($i=2;$i<count($archivo);$i++){
             $r = $ruta."/".$archivo[$i];
-            echo "<a href=$r><li>.$archivo[$i].</li></a>";
+            echo "<a target='_blank' href=$r class='arLi'><li>.$archivo[$i].</li></a>";
         }
 
         /*

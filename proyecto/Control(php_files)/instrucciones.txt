@@ -1,0 +1,22 @@
+﻿------------------------------------------------------
+---------INSTRUCCIONES PARA SUBIR CORRECCIONES--------
+-----------                              -------------
+
+1.- ¿Cómo se guarda una corrección?
+    Una corrección se debe guardar con el nickmane del
+    alumno que ha subido la solución (el nombre de su
+    carpeta como se muestra en el panel de alumnos)
+    junto con el nombre del archivo que éste subió.
+
+2.- ¿Cómo se sube una corrección?
+    Para subir una corrección, se debe hacer click en
+    el botón "subir archivo" del panel de alumnos. Se
+    debe seleccionar el archivo de código ya corregido
+    nombrado como se dio a conocer con anterioridad.
+
+3.- ¿Cómo queda guardada una corrección una vez subida?
+    una corrección, después de haberse subido, queda
+    guardada en el directorio "correcciones" que es
+    donde se guardan en general las correcciones de
+    todos los alumnos en tutoría. Esto con el fin de
+    que ellos se puedan dar retroalimentación entre sí.

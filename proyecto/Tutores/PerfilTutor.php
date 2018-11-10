@@ -70,7 +70,7 @@
 <article id="page2">
   <section>
     <h1>Alumnos en tutoria</h1>
-    <h3>problemas subidos por los alumnos: </h3>
+    <h3>Alumnos disponibles: </h3>
     <br><br>
 
     <?php
@@ -80,8 +80,14 @@
      ?>
       <hr>
       <br><br><br><br>
-    <p>Subir una corrección: </p>
-      <input type="file" name="correccion">
+    <p>Subir una corrección: </p><br>
+      <form action="../Control(php_files)/subirCorreccion.php" method="post" enctype="multipart/form-data">
+          <input type="file" name="correccion"><br><br>
+          <input type="submit" value="subir...">
+      </form>
+
+      <hr>
+      <p>instrucciones para subir una corrección: </p> <a href="../Control(php_files)/instrucciones.txt" style="color:cyan" target="_blank">instrucciones.txt</a>
   </section>
 </article>
 <article id="page3">
