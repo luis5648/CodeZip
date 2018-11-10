@@ -75,3 +75,10 @@ insert into alumnos values (1,'Luis','ap1','user1','12345','123@123.com',1,1);
   INSERT INTO web.problemas (nombreProblema, lenguaje, enunciado) VALUES ('circuloj_1', 1, 'Pedir el radio de un círculo y calcular su área. A=PI*r^2.');
   INSERT INTO web.problemas (nombreProblema, lenguaje, enunciado) VALUES ('circuloj_2', 1, 'Pedir el radio de una circunferencia y calcular su longitud.');
   INSERT INTO web.problemas (nombreProblema, lenguaje, enunciado) VALUES ('validacionj_1', 1, 'Pedir dos números y decir si son iguales o no.');
+
+
+  -- inserts de tutores:
+
+INSERT INTO web.tutores (nombreTutor, apellidoPaterno, apellidoMaterno, passTutor, nombreUsuario, especialidad) VALUES ('Mirsha', 'Espinoza', 'Ortiz', '123456', 'Mish', 1);
+INSERT INTO web.tutores (nombreTutor, apellidoPaterno, apellidoMaterno, passTutor, nombreUsuario, especialidad) VALUES ('Luis', 'Roman', 'Marin', '123456', 'luis1103', 3);
+INSERT INTO web.tutores (nombreTutor, apellidoPaterno, apellidoMaterno, passTutor, nombreUsuario, especialidad) VALUES ('Jose Luis', 'Del toro', 'Gomez', '123456', 'JL1451', 2);
