@@ -682,11 +682,7 @@
 							<a href="https://mega.nz/#F!c9dRwY6I!tfgvONOPDljfK68MuQs5Wg!w8lwjSjB?04szUYgZ" target="_blank">Metodo Main [Java]</a>
 						</p>
 						</ul>
-						
-
-
-
-						
+												
 						</div>						
 					</div>
 
