@@ -50,7 +50,7 @@
 								<p>Nombre del alumno: <?php echo $row["nombreAlumno"];?>  </p>
 								<p>E-mail registrado: <?php echo $row["emailAlumno"];?> </p>
 								<p>Apellidos: <?php echo $row["apellidosAlumno"];?>  </p>
-								<p>Curso actual :									</p>
+								<p>Curso actual : 									</p>
 								<!--	PONER QUERY DE CURSO ACTUAL (SI LO HAY) -->
 							</div>  
 					</div>
@@ -85,9 +85,11 @@
 						<a href="../PAGE-INIT/Cursos/Java-complejo.html" target="_blank">Curso de Java [nivel complejo]</a>
 						</p>
 
-					
-						
-					
+
+						<p>
+                            <a href="Soluciones/Correcciones" target="_blank">Ver Soluciones corregidas</a>
+                        </p>
+
 						</div>
 					</div>
 
