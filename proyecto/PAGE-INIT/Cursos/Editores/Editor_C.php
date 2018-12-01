@@ -10,7 +10,7 @@
             right: 0;
             bottom: 40%;
             left: 0;
-            font-size: 16px;
+            font-size: 14pt;
         }
         div.problema{
             background-color: black;
