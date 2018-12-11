@@ -78,6 +78,15 @@ $rowen = $resp->fetch_assoc();
 <form action="../../../Control(php_files)/subirProblemas.php" method="post" enctype="multipart/form-data">
     <input type="file" name="archivo">
     <button>subir codigo</button>
+
+    <div style="text-align: right;">
+        <p>tema del editor: </p>
+        <select name="EditorColor" id="theme" >
+            <option value="Monokai">Monokai</option>
+            <option value="Eclipse-syntaxis">Eclipse-syntaxis</option>
+        </select>
+    </div>
+
     <div id="editor" ><textarea name="TAedit">//Escribe tu código de c o c++ aqui!
 
         </textarea>

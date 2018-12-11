@@ -23,7 +23,7 @@ if ($result->num_rows > 0)
 		}else
 			{
                 echo '<script> alert("Usuario o contraseña incorrectos");
-        location.href = "../PAGE-INIT/home.html" </script>';
+        location.href = "../../index.html" </script>';
 			exit();
 		}
 }

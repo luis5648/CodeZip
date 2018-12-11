@@ -17,7 +17,7 @@ if (isset($_POST['enviar'])){
 
     if ($conn->query($insertSolc) === TRUE) {
         echo '<script type="text/javascript">alert("Solucion enviada para calificar!");
-                location.href="../PAGE-INIT/home.html";</script>';
+                location.href="../../index.html";</script>';
 
         exit();
     }
