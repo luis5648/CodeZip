@@ -109,7 +109,7 @@ $rowen = $resp->fetch_assoc();
                 <div class="enviar-recibir">
 
                     <button class="siguiente btn btn-primary" type="submit" name="sig">Siguiente problema</button>
-                     <a class="btn btn-primary" href="#" id="link" download="contenido.c">Descargar el contenido del textarea</a>
+                     <a class="btn btn-primary" href="#" id="link" download="contenido.c">Descargar código</a>
                 </div>
             </div>
 
@@ -118,11 +118,18 @@ $rowen = $resp->fetch_assoc();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.2/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var color = document.querySelector('#theme');
-    var itemColor = color.options[color.selectedIndex].text;
+    var itemColor = color.options[color.selectedIndex].value;
     var editor = ace.edit("editor");
 //    editor.setTheme("ace/theme/monokai");
     editor.session.setMode("ace/mode/c_cpp");
+    //evento para cargar el tema al inicio de la página
+   window.addEventListener('load',()=>{
 
+       editor.setTheme(`ace/theme/${itemColor}`);
+   });
+
+
+    //evento para cambiar el tema según la selección
     color.addEventListener('change',(e)=>{
 
         editor.setTheme(`ace/theme/${e.target.value}`);
@@ -130,10 +137,12 @@ $rowen = $resp->fetch_assoc();
     });
 
     //bajar lo del textarea
+
+
     var txt = document.querySelector('#editor');
     document.getElementById('link').onclick = function(code) {
         this.href = 'data:text/none;charset=utf-8,'
-            + encodeURIComponent(txt.innerText);
+            + encodeURIComponent(txt.innerText.substr(txt.innerText.indexOf("//Escribe tu código de c o c++ aqui!")));
     };
 </script>
 </body>
