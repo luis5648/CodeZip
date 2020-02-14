@@ -21,7 +21,7 @@
             height: 40%;
             color: white;
         }
-        div.enviar-recivir{
+        div.enviar-recibir{
             text-align: center;
             width: auto;
             height: auto;

@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>C & Cpp editor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style type="text/css" media="screen">
         #editor {
             position: absolute;
@@ -21,10 +22,11 @@
             height: 40%;
             color: white;
         }
-        div.enviar-recivir{
+        div.enviar-recibir{
             text-align: center;
             width: auto;
             height: auto;
+            margin-top: 0.5%;
         }
         .enum{
             background-color: black;
@@ -32,7 +34,7 @@
             bottom: 0;
             left: 0;
             width: 99.5%;
-            height: auto;
+            height: 80%;
             color: white;
             resize: none;
             font-size: 16px;
@@ -75,51 +77,64 @@ $rowen = $resp->fetch_assoc();
 ?>
 
 
-<form action="../../../Control(php_files)/subirProblemas.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="archivo">
-    <button>subir codigo</button>
+<form style="display: inline" action="../../../Control(php_files)/subirProblemas.php" method="post" enctype="multipart/form-data">
+    <input class="btn btn-secondary" type="file" name="archivo">
+    <button class="btn btn-secondary">subir codigo</button>
 
-    <div style="text-align: right;">
-        <p>tema del editor: </p>
+
+
+    <div style="display: inline; padding-left: 5%">
+        <label for="theme">tema del editor</label>
         <select name="EditorColor" id="theme" >
-            <option value="Monokai">Monokai</option>
-            <option value="Eclipse-syntaxis">Eclipse-syntaxis</option>
+            <option value="monokai">Monokai</option>
+            <option value="eclipse">Eclipse-syntaxis</option>
+            <option value="solarized_dark">Solarized Dark</option>
+            <option value="solarized_light">Solarized Light</option>
+
         </select>
     </div>
 
-    <div id="editor" ><textarea name="TAedit">//Escribe tu código de c o c++ aqui!
+    <div id="editor" ><textarea name="TAedit" id="TA_txt">//Escribe tu código de c o c++ aqui!
 
         </textarea>
     </div>
 
 </form>
 
-
-
 <form action=""  method="post">
-
-
-
-
 
             <div class="problema">
               <input type="hidden" name="conta" value="<?=$iteradorProblemas ?>">
                 <textArea readonly cols="20" rows="10" class="enum" name="prob">Problema: <?php echo $iteradorProblemas;?> <?php echo $rowen['enunciado']; ?> </textArea>
-                <div class="enviar-recivir">
+                <div class="enviar-recibir">
 
-                    <button class="siguiente" type="submit" name="sig">Siguiente problema</button>
+                    <button class="siguiente btn btn-primary" type="submit" name="sig">Siguiente problema</button>
+                     <a class="btn btn-primary" href="#" id="link" download="contenido.c">Descargar el contenido del textarea</a>
                 </div>
             </div>
+
         </form>
-
-
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.2/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
+    var color = document.querySelector('#theme');
+    var itemColor = color.options[color.selectedIndex].text;
     var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/monokai");
+//    editor.setTheme("ace/theme/monokai");
     editor.session.setMode("ace/mode/c_cpp");
+
+    color.addEventListener('change',(e)=>{
+
+        editor.setTheme(`ace/theme/${e.target.value}`);
+
+    });
+
+    //bajar lo del textarea
+    var txt = document.querySelector('#editor');
+    document.getElementById('link').onclick = function(code) {
+        this.href = 'data:text/none;charset=utf-8,'
+            + encodeURIComponent(txt.innerText);
+    };
 </script>
 </body>
 </html>
