@@ -45,24 +45,8 @@
 </head>
 <body>
 
-<?php
- require '../../../Control(php_files)/conexion.php';
-//generar problemas:
-
-$iteradorProblemas =1;
-if (isset($_POST['sig'])){
-    $iteradorProblemas = $_POST["conta"]+1;
-}else {
-  $iteradorProblemas =1;
-}
-
-$gen = "SELECT * FROM problemas WHERE idProblema = '$iteradorProblemas' and lenguaje = '2'";
-$resp = $conn->query($gen);
-$rowen = $resp->fetch_assoc();
 
 
-
-?>
 <!-- Prueba para escribir archivos con php -->
 <?php
 /*$nombreArchivo = $_POST['archNam'];
@@ -101,21 +85,22 @@ $rowen = $resp->fetch_assoc();
 
 </form>
 
-<form action=""  method="post">
+
 
             <div class="problema">
-              <input type="hidden" name="conta" value="<?=$iteradorProblemas ?>">
-                <textArea readonly cols="20" rows="10" class="enum" name="prob">Problema: <?php echo $iteradorProblemas;?> <?php echo $rowen['enunciado']; ?> </textArea>
+                <!-- here goes the ajax -->
+                <textArea readonly cols="20" rows="10" class="enum" name="prob" id="prob"></textArea>
                 <div class="enviar-recibir">
 
-                    <button class="siguiente btn btn-primary" type="submit" name="sig">Siguiente problema</button>
+                    <button class="siguiente btn btn-primary" type="submit" name="sig" id="sig">Siguiente problema</button>
                      <a class="btn btn-primary" href="#" id="link" download="codigo.c">Descargar código</a>
                 </div>
             </div>
 
-        </form>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.2/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="management/ed_c.js"></script>
 </body>
 </html>
