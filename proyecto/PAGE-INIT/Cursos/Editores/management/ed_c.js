@@ -41,12 +41,19 @@ $(document).ready(function () {
         success: function (response) {
             let r = JSON.parse(response);
 
-            document.querySelector('#prob').innerText = r[0].enunciado;
+            //document.querySelector('#prob').innerText = r[0].enunciado;
+            $('#prob').text( r[0].enunciado);
 
             $('#sig').click(function () {
 
                 cont = cont +1;
-                document.querySelector('#prob').innerText = r[cont].enunciado;
+                if (r.length <= cont){
+                    alert("No hay más problemas disponibles");
+                }
+                else{
+
+                    $('#prob').text( r[cont].enunciado);
+                }
             });
         }
     });
