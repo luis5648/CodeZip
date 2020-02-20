@@ -100,7 +100,7 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.2/ace.js" type="text/javascript" charset="utf-8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../../JS/jquery.js"></script>
 <script src="management/ed_c.js"></script>
 </body>
 </html>
