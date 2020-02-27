@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" href="../CSS/style-perfilTutor.css">
 
-	<form action="../Control(php_files)/cerrar.php">
+	<form action="../princ/cerrar.php">
 		 <button type="submit" class="exit"name="botonSalir1">SALIR</button>
 		</form>
 		<br><br><br><br>
@@ -16,7 +16,7 @@
 
 <?php
 
-		require "../Control(php_files)/conexion.php";
+		require "../princ/conexion.php";
 		session_start();
 
 		$user = $_SESSION['tutorLog'];
@@ -86,20 +86,20 @@
 		<br><br>
 
 		<?php
-			require "../Control(php_files)/vistaDirTutor.php";
-			echo obtener_estructura_directorios("../Control(php_files)/Soluciones");
+			require "../princ/vistaDirTutor.php";
+			echo obtener_estructura_directorios("../princ/Soluciones");
 
 		 ?>
 			<hr>
 			<br><br><br><br>
 		<p>Subir una corrección: </p><br>
-			<form action="../Control(php_files)/subirCorreccion.php" method="post" enctype="multipart/form-data">
+			<form action="../princ/subirCorreccion.php" method="post" enctype="multipart/form-data">
 					<input type="file" name="correccion"><br><br>
 					<input type="submit" value="subir...">
 			</form>
 
 			<hr>
-			<p>instrucciones para subir una corrección: </p> <a href="../Control(php_files)/instrucciones.txt" style="color:cyan" target="_blank">instrucciones.txt</a>
+			<p>instrucciones para subir una corrección: </p> <a href="../princ/instrucciones.txt" style="color:cyan" target="_blank">instrucciones.txt</a>
 	</section>
 </article>
 

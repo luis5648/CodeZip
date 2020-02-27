@@ -5,7 +5,6 @@
 </head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="../CSS/style-perfilUser.css">
-<script type="text/javascript" src="../JS/js-UserPerfil.js"></script>
 <body>
 <div id="wrapper">
 
@@ -18,7 +17,7 @@
 </div>	
 
 
-<form action="../Control(php_files)/cerrar.php">
+<form action="/cerrar.php">
      <button type="submit" class="exit"name="botonSalir1">SALIR</button>
     </form>
 <div class="tab">
@@ -728,5 +727,8 @@
 
 
 </div>
+
+<script type="text/javascript" src="../JS/js-UserPerfil.js"></script>
+
 </body>
 </html>

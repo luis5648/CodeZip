@@ -1,6 +1,6 @@
 <?php
 
-require '../../../../Control(php_files)/conexion.php';
+require '../../../../princ/conexion.php';
 
 $valClick = 1;
 if (isset( $_POST['sig'])){

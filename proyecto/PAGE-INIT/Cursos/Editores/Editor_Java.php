@@ -44,7 +44,7 @@
 <body>
 
 <?php
-require '../../../Control(php_files)/conexion.php';
+require '../../../princ/conexion.php';
 //generar problemas:
 
 $iteradorProblemas =1;
@@ -63,7 +63,7 @@ $rowen = $resp->fetch_assoc();
 ?>
 
 
-<form action="../../../Control(php_files)/subirProblemas.php" method="post" enctype="multipart/form-data">
+<form action="../../../princ/subirProblemas.php" method="post" enctype="multipart/form-data">
     <input type="file" name="archivo">
     <button>subir codigo</button>
     <div id="editor" ><textarea name="TAedit">//Escribe tu código de Java aqui!
