@@ -61,7 +61,7 @@
 ?>
 
 
-<form style="display: inline" action="../../../princ/subirProblemas.php" method="post" enctype="multipart/form-data">
+<form style="display: inline" action="../../../princ/ftp_upl.php" method="post" enctype="multipart/form-data">
     <input class="btn btn-secondary" type="file" name="archivo">
     <button class="btn btn-secondary">subir codigo</button>
 

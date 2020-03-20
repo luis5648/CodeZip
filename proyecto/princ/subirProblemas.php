@@ -20,12 +20,18 @@ if(!file_exists('Soluciones/'."$carpeta")){
             echo "Archivo no se pudo guardar";
         }
     }
+    else{
+        echo "quepasomaestro?";
+        echo "<br>".$carpeta;
+    }
 }else{
     if(move_uploaded_file($guardado, 'Soluciones/'."$carpeta/"."$nombre")){
         echo '<script type="text/javascript">alert("Archivo guardado.");
     location.href="../PAGE-INIT/Cursos/Editores/Editor_C.php";</script>';
     }else{
         echo "Archivo no se pudo guardar";
+
+        echo "<br>".$carpeta . "a";
     }
 }
 
