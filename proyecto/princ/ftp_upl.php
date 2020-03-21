@@ -25,11 +25,14 @@ if (is_uploaded_file($_FILES["archivo"]["tmp_name"])) {
 
 						# Subimos el fichero
 						if (@ftp_put($conn_id, $_FILES["archivo"]["name"], $_FILES["archivo"]["tmp_name"], FTP_BINARY))
-							echo "Fichero subido correctamente";
+						echo '<script type="text/javascript">alert("Archivo guardado.");
+						location.href="../PAGE-INIT/Cursos/Editores/Editor_C.php";</script>';
 						else
-							echo "No ha sido posible subir el fichero";
+						echo '<script type="text/javascript">alert("No se ha podido guardar el archivo! contacte con soporte del sitio.");
+						location.href="../PAGE-INIT/Cursos/Editores/Editor_C.php";</script>';
 					} else
-						echo "No existe el directorio especificado";
+					echo '<script type="text/javascript">alert("No existe la ruta de guardado, contacte a soporte del sitio.");
+					location.href="../PAGE-INIT/Cursos/Editores/Editor_C.php";</script>';
 				} else {
 					echo "no se pudo crear $carpeta";
 				}
@@ -40,6 +43,6 @@ if (is_uploaded_file($_FILES["archivo"]["tmp_name"])) {
 		ftp_close($conn_id);
 	} else
 		echo "No ha sido posible conectar con el servidor";
-} else {
-	
 }
+
+//listar archivos del ftp: https://stackoverflow.com/questions/52855025/list-and-download-clicked-file-from-ftp
