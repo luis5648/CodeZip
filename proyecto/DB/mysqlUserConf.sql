@@ -1,6 +1,6 @@
 -- configuración de usuarios correcta.
 
-create user 'test'@'localhost' IDENTIFIED by '123';
+create user 'luis'@'localhost' IDENTIFIED by 'newborn';
 
-GRANT ALL PRIVILEGES ON * . * TO 'test'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'luis'@'localhost';
 flush privileges;
