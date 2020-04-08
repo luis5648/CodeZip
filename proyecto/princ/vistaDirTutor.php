@@ -1,19 +1,21 @@
 <style>
-    .arLi{
+    .arLi {
         color: cyan;
         list-style-type: disc;
     }
 </style>
 <?php
-function obtener_estructura_directorios($ruta){
+
+function obtener_estructura_directorios($ruta)
+{
     // Se comprueba que realmente sea la ruta de un directorio
-    if (is_dir($ruta)){
+    if (is_dir($ruta)) {
         // Abre un gestor de directorios para la ruta indicada
         //$gestor = opendir($ruta);
         echo "<ul>";
         $archivo = scandir($ruta);
-        for ($i=2;$i<count($archivo);$i++){
-            $r = $ruta."/".$archivo[$i];
+        for ($i = 2; $i < count($archivo); $i++) {
+            $r = $ruta . "/" . $archivo[$i];
             echo "<a target='_blank' href=$r class='arLi'><li>.$archivo[$i].</li></a>";
         }
 
@@ -49,4 +51,17 @@ function obtener_estructura_directorios($ruta){
         echo "No es una ruta de directorio valida<br/>";
     }
 }
- ?>
+
+function obtenerFTP()
+{
+    require 'ftp_acc.php';
+
+    $login_result = ftp_login($conn_id, $user, $password);
+
+    $contents = ftp_nlist($conn_id, $ruta);
+    for ($i = 0; $i < count($contents); $i++)
+        echo "<a href=" . substr($contents[$i], 1) . ">" . substr($contents[$i], 1) . "</a>";
+    ftp_close($conn_id);
+}
+
+?>

@@ -87,7 +87,7 @@
 
 		<?php
 			require "../princ/vistaDirTutor.php";
-			echo obtener_estructura_directorios("../princ/Soluciones");
+			obtenerFTP();
 
 		 ?>
 			<hr>
