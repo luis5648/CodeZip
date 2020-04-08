@@ -8,12 +8,14 @@ $carpeta = $_SESSION['usuario'];
 function ftp_is_dir($dir)
 {
 	global $conn_id;
-	// get current directory
+	// obtiene el directorio actual
 	$original_directory = ftp_pwd($conn_id);
-	// test if you can change directory to $dir
-	// suppress errors in case $dir is not a file or not a directory
+	// Prueba si se puede cambiar al directorio a comprobar
+	
 	if (@ftp_chdir($conn_id, $dir)) {
-		// If it is a directory, then change the directory back to the original directory
+		
+		//si es un directorio, cambia de regreso al original (actual anterior)
+		//de ser así, existe.
 		ftp_chdir($conn_id, $original_directory);
 		return true;
 	} else {
