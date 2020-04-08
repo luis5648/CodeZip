@@ -17,7 +17,7 @@
 </div>	
 
 
-<form action="/cerrar.php">
+<form action="cerrar.php">
      <button type="submit" class="exit"name="botonSalir1">SALIR</button>
     </form>
 <div class="tab">

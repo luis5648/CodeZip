@@ -15,5 +15,5 @@ if (ini_get("session.use_cookies")) {
 // Destruir la sesión.
 session_destroy();
 // Volver al inicio
-header("Location:../PAGE-INIT/index.html");
+header("Location:../../index.html");
 ?>
