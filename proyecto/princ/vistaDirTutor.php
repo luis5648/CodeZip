@@ -59,8 +59,15 @@ function obtenerFTP()
     $login_result = ftp_login($conn_id, $user, $password);
 
     $contents = ftp_nlist($conn_id, $ruta);
-    for ($i = 0; $i < count($contents); $i++)
-        echo "<a href=" . substr($contents[$i], 1) . ">" . substr($contents[$i], 1) . "</a>";
+    
+    foreach ($contents as $file) {
+        $fs = ftp_nlist($conn_id, $file);
+        foreach ($fs as $f){
+            echo "<a href=\"../princ/dw.php?file=".urlencode($f)."\">".htmlspecialchars($f)."</a>";
+        echo "<br>";
+        }
+        
+    }
     ftp_close($conn_id);
 }
 
