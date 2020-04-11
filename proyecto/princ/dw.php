@@ -3,7 +3,7 @@ include "ftp_acc.php";
 
 
 #nuevo intento con modo pasivo
-ftp_pasv($conn_id,false);
+ftp_pasv($conn_id,true);
 $path = $_GET["file"];
 $tamanio = ftp_size($conn_id,$path);
 
