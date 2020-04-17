@@ -78,7 +78,7 @@
         </select>
     </div>
 
-    <div id="editor" ><textarea name="TAedit" id="TA_txt">//Escribe tu código de c o c++ aqui!
+    <div id="editor" ><textarea name="TAedit" >//Escribe tu código de c o c++ aqui!
 
         </textarea>
     </div>
@@ -91,8 +91,12 @@
                 <!-- here goes the ajax -->
                 <textArea readonly cols="20" rows="10" class="enum" name="prob" id="prob"></textArea>
                 <div class="enviar-recibir">
+                <select name="selectP" id="selectP">
+                        <option value="" disabled >elija un problema</option>
 
-                    <button class="siguiente btn btn-primary" type="submit" name="sig" id="sig">Siguiente problema</button>
+                    </select>
+                   
+
                      <a class="btn btn-primary" href="#" id="link" download="codigo.c">Descargar código</a>
                 </div>
             </div>

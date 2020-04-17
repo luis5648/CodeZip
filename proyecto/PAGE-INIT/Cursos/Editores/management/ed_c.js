@@ -44,17 +44,41 @@ $(document).ready(function () {
             //document.querySelector('#prob').innerText = r[0].enunciado;
             $('#prob').text( r[0].enunciado);
 
-            $('#sig').click(function () {
+            // $('#sig').click(function () {
 
-                cont = cont +1;
-                if (r.length <= cont){
-                    alert("No hay más problemas disponibles");
+            //     cont = cont +1;
+            //     if (r.length <= cont){
+            //         alert("No hay más problemas disponibles");
+            //     }
+            //     else{
+
+            //         $('#prob').text( r[cont].enunciado);
+            //     }
+            // });
+
+            //selectbox
+
+            r.forEach(element => {
+                $('#selectP').append(`<option id="opcProblema" desc="${element.numero}" value="${element.id}">${element.nombre}</option>`);
+
+         
+            });
+
+            $('#selectP').change(function (){
+                var sel = document.querySelector('#selectP');
+                item = sel.options[sel.selectedIndex].getAttribute("desc");
+                console.log(item);
+                if(r.length<item){
+                    alert("NO")
                 }
                 else{
-
-                    $('#prob').text( r[cont].enunciado);
+                    $('#prob').text(r[item].enunciado);
                 }
+                
             });
+            
+            
+
         }
     });
 });
