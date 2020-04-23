@@ -41,12 +41,12 @@ if (is_uploaded_file($_FILES["archivo"]["tmp_name"])) {
 						# Subimos el fichero
 						if (ftp_put($conn_id, $_FILES["archivo"]["name"], $_FILES["archivo"]["tmp_name"], FTP_BINARY))
 							echo '<script type="text/javascript">alert("Archivo guardado.");
-						location.href="../PAGE-INIT/Cursos/Editores/Editor_C.php";</script>';
+						history.back(1);</script>';
 						else
 							echo '<script type="text/javascript">alert("No se ha podido guardar el archivo! contacte con soporte del sitio.");
-						location.href="../PAGE-INIT/Cursos/Editores/Editor_C.php";</script>';
+						history.back(1);</script>';
 					} echo '<script type="text/javascript">alert("No existe la ruta de guardado, contacte a soporte del sitio.");
-					location.href="../PAGE-INIT/Cursos/Editores/Editor_C.php";</script>';
+					history.back(1);</script>';
 				}
 			}else {
 				if (@ftp_chdir($conn_id, $ruta . '/' . $carpeta)) {
@@ -54,12 +54,12 @@ if (is_uploaded_file($_FILES["archivo"]["tmp_name"])) {
 					# Subimos el fichero
 					if (ftp_put($conn_id, $_FILES["archivo"]["name"], $_FILES["archivo"]["tmp_name"], FTP_BINARY))
 						echo '<script type="text/javascript">alert("Archivo guardado.");
-					location.href="../PAGE-INIT/Cursos/Editores/Editor_C.php";</script>';
+					history.back(1);</script>';
 					else
 						echo '<script type="text/javascript">alert("No se ha podido guardar el archivo! contacte con soporte del sitio.");
-					location.href="../PAGE-INIT/Cursos/Editores/Editor_C.php";</script>';
+					history.back(1);</script>';
 				} echo '<script type="text/javascript">alert("No existe la ruta de guardado, contacte a soporte del sitio.");
-				location.href="../PAGE-INIT/Cursos/Editores/Editor_C.php";</script>';
+				history.back(1);</script>';
 			}
 
 		} else {

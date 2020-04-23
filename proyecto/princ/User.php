@@ -2,6 +2,46 @@
 <html>
 <head>
 	<title>PERFIL USUARIO</title>
+
+
+    <style>
+        .modalContainer {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modalContainer .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid lightgray;
+            border-top: 10px solid #58abb7;
+            width: 60%;
+        }
+
+        .modalContainer .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .modalContainer .close:hover,
+        .modalContainer .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="../CSS/style-perfilUser.css">
@@ -60,9 +100,32 @@
 						<div class="container">
 						<h3>Cursos disponibles</h3>
 
-			
 
-						<p>
+                            <p>Ver archivos corregidos: </p>
+                            <button id="btnModal">Abrir...</button>
+                            <div id="tvesModal" class="modalContainer">
+                                <div class="modal-content">
+                                    <span class="close">×</span>
+                                    <h2>Correcciones de tutores</h2>
+                                    <?php
+                                    require 'ftp_acc.php';
+                                    $login_result = ftp_login($conn_id, $user, $password);
+                                    $contents = ftp_nlist($conn_id, $corr);
+                                    foreach ($contents as $file) {
+                                        $fs = ftp_nlist($conn_id, $file);
+                                        foreach ($fs as $f) {
+                                            echo "<a href=\"dw.php?file=" . urlencode($f) . "\">" . htmlspecialchars($f) . "</a>";
+                                            echo "<br>";
+                                        }
+
+                                    }
+                                    ftp_close($conn_id);
+                                    ?>
+                                </div>
+                            </div>
+
+
+                            <p>
 						<img src="../PIC/icon-C-code.png" alt="Icon" style="float:left;width:33px;height:33px;">
 						<a href="../PAGE-INIT/Cursos/C.html" target="_blank">Curso de C</a>
 						</p>
@@ -85,9 +148,6 @@
 						</p>
 
 
-						<p>
-                            <a href="Soluciones/Correcciones" target="_blank">Ver Soluciones corregidas</a>
-                        </p>
 
 						</div>
 					</div>
@@ -729,6 +789,40 @@
 </div>
 
 <script type="text/javascript" src="../JS/js-UserPerfil.js"></script>
+<script !src="">
+    if (document.getElementById("btnModal")) {
+        var modal = document.getElementById("tvesModal");
+        var btn = document.getElementById("btnModal");
+        var span = document.getElementsByClassName("close")[0];
+        var body = document.getElementsByTagName("body")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+
+            body.style.position = "static";
+            body.style.height = "100%";
+            body.style.overflow = "hidden";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+
+            body.style.position = "inherit";
+            body.style.height = "auto";
+            body.style.overflow = "visible";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+
+                body.style.position = "inherit";
+                body.style.height = "auto";
+                body.style.overflow = "visible";
+            }
+        }
+    }
+</script>
 
 </body>
 </html>

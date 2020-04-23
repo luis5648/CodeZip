@@ -6,11 +6,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel="stylesheet" href="../CSS/style-perfilTutor.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
 
 	<form action="../princ/cerrar.php">
 		 <button type="submit" class="exit"name="botonSalir1">SALIR</button>
 		</form>
 		<br><br><br><br>
+
 
 </head>
 
@@ -82,7 +84,7 @@
 <article id="page2">
 	<section>
 		<h1>Alumnos en tutoria</h1>
-		<h3>Alumnos disponibles: </h3>
+        <h5>Archivos de alumnos disponibles para descarga: <br>(nombre: files_usuarioQueEnvia_nombreDelArchivo) </h5>
 		<br><br>
 
 		<?php
@@ -93,7 +95,7 @@
 			<hr>
 			<br><br><br><br>
 		<p>Subir una corrección: </p><br>
-			<form action="../princ/subirCorreccion.php" method="post" enctype="multipart/form-data">
+        <form action="../princ/ftp_upl_corr.php" method="post" enctype="multipart/form-data">
 					<input type="file" name="correccion"><br><br>
 					<input type="submit" value="subir...">
 			</form>
