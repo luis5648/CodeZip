@@ -1,7 +1,7 @@
 var color = document.querySelector('#theme');
 var itemColor = color.options[color.selectedIndex].value;
 var editor = ace.edit("editor");
-editor.session.setMode("ace/mode/c_cpp");
+editor.session.setMode("ace/mode/java");
 
 //evento para cargar el tema al inicio de la página
 window.addEventListener('load', () => {
@@ -32,7 +32,7 @@ $(document).ready(function () {
 
 
     var direcc = 'management/c_api.php';
-    var lenguaje = 2;
+    var lenguaje = 1;
     var cont = 0;
     $.ajax({
         type: 'POST',

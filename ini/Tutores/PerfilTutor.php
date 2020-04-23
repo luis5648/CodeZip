@@ -101,7 +101,7 @@
 			</form>
 
 			<hr>
-			<p>instrucciones para subir una corrección: </p> <a href="../princ/instrucciones.txt" style="color:cyan" target="_blank">instrucciones.txt</a>
+		
 	</section>
 </article>
 

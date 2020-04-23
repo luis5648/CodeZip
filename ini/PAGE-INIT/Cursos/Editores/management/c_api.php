@@ -2,11 +2,10 @@
 
 require '../../../../princ/conexion.php';
 
-//$valClick = 1;
-//if (isset( $_POST['sig'])){
+$lang = $_POST["lenguaje"];
 
 
-    $gen = "SELECT * FROM problemas WHERE lenguaje = '2'";
+    $gen = "SELECT * FROM problemas WHERE lenguaje = '$lang'";
 
     $rowen = mysqli_query($conn,$gen );
     $i = 0;
