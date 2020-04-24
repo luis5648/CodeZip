@@ -49,7 +49,7 @@
 		<ul>
 			<li class="gnav1">GENERAL</li>
 			<li class="gnav2">ALUMNOS</li>
-			<li class="gnav3">PROYECTOS</li>
+			<li class="gnav3">AÑADIR PROBLEMAS</li>
 			<li class="gnav4">MATERIAL [ C ]</li>
 			<li class="gnav5">MATERIAL [ C++ ]</li>
 			<li class="gnav6">MATERIAL [Java 1-2]</li>
@@ -108,8 +108,9 @@
 
 <article id="page3">
 	<section>
-		<h1>Proyectos disponibles</h1>
-		<p>This is tab three.</p>
+		<h1>Añadir problemas</h1>
+		<form action=""></form>
+		<p>problemas</p>
 	</section>
 </article>
 
