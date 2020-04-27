@@ -111,15 +111,30 @@ $espFil = $espRes->fetch_assoc();
 				<article id="page3">
 					<section>
 						<h1>Añadir problemas</h1>
-						<form class="p-5 form-group">
+						<div class="p-3 form-group">
 							<p>Nombre del problema:</p>
-							<input required type="text" id="nombreP" class="form-control rounded" >
+							<input type="text" autocomplete="off" id="nombreP" class="form-control rounded">
 
 							<p class="mt-4 ">Problema:</p>
-							<textarea required id="problemaE" cols="30" class="form-control rounded" rows="10" ></textarea>
+							<textarea autocomplete="off" id="problemaE" cols="30" class="form-control rounded" rows="10"></textarea>
 
 							<button class="form-control rounded mt-1" id="subirP">Subir problema</button>
-						</form>
+						</div>
+
+						<table class="table table-dark table-striped">
+							<thead>
+								<tr>
+									<th>Nombre del problema</th>
+									<th>Problema</th>
+									<th>Acciones</th>
+								</tr>
+
+							</thead>
+							<tbody id="tablaB">
+								<!-- Contenido -->
+
+							</tbody>
+						</table>
 					</section>
 				</article>
 
