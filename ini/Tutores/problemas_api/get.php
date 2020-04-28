@@ -2,10 +2,19 @@
 
 require '../../princ/conexion.php';
 
-$lang = $_POST["lenguaje"];
+session_start();
+
+$user = $_SESSION['tutorLog'];
+$sql = "SELECT idTutor from tutores  where nombreUsuario = '$user'";
+
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+
+$id = $row['idTutor'];
 
 
-    $gen = "SELECT * FROM problemas";
+
+$gen = "SELECT * FROM problemas where autor = $id";
 
     $rowen = mysqli_query($conn,$gen );
     $i = 0;
@@ -21,5 +30,3 @@ $lang = $_POST["lenguaje"];
         $i++;
     }
     echo json_encode($json);
-
-?>

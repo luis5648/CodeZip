@@ -16,7 +16,7 @@ $(document).ready(function () {
 				<tr>
 					<td>${element.nombre}</td>
 					<td>${element.enunciado}</td>
-					<td><a>Modificar</a>||<a>Eliminar</a></td>
+					<td><a href="#">Eliminar</a></td>
 				
 				</tr>
 				
