@@ -9,18 +9,18 @@ $(document).ready(function () {
 
 		success: function(response){
 			let datos = JSON.parse(response);
-			console.log(datos);
+			
 			tableD = ''
 			datos.forEach(element =>{
 				tableD += `
-				<tr>
+				<tr idP="${element.id}">
+
+					<td>${element.id}</td>
 					<td>${element.nombre}</td>
 					<td>${element.enunciado}</td>
-					<td><a href="#">Eliminar</a></td>
+					<td><a href="#" class="Eliminar">Eliminar</a></td>
 				
-				</tr>
-				
-				
+				</tr>								
 				`
 				$('#tablaB').html(tableD);
 				
@@ -49,11 +49,23 @@ $('#subirP').click(function (evObject) {
 
 			success: function(response){
 				let datos = JSON.parse(response);
-				console.log(datos);
+				alert(datos.situation);
 				
 			}
 		});
 
+	}
+});
+
+
+//eliminar
+$(document).on('click','.Eliminar', function (){
+	let elemento = $(this)[0].parentElement.parentElement;
+	let identifier = $(elemento).attr('idP');
+
+	if(confirm("Está seguro que desea eliminar el problema?")){
+		window.location = "problemas_api/del.php?w="+btoa(identifier);
+		
 	}
 });
 

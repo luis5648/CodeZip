@@ -22,9 +22,9 @@ $lenguaje = $row['especialidad'];
 $sqlInsertar = "INSERT INTO problemas (nombreProblema, lenguaje, enunciado, autor) VALUES ('$problemaN', '$lenguaje', '$problemaE', '$id')";
 
 if ($conn->query($sqlInsertar)===TRUE) {
-    echo json_encode("agregado!");
+    echo json_encode(array("situation" => "agregado!"));
 }else{
-    echo json_encode("Error al agregar: ".mysqli_error($conn));
+    echo json_encode(array("situation" =>"Error al agregar!"));
 }
 
 //mysqli_query($conn,"INSERT INTO problemas (nombreProblema, lenguaje, enunciado, autor) VALUES ('$problemaN','$problemaE', '$id')");

@@ -120,10 +120,11 @@ $espFil = $espRes->fetch_assoc();
 
 							<button class="form-control rounded mt-1" id="subirP">Subir problema</button>
 						</div>
-
+						<div style="overflow-x: auto; overflow-y: auto; height: 500px; width: auto;">
 						<table class="table table-dark table-striped">
 							<thead>
 								<tr>
+									<th>ID</th>
 									<th>Nombre del problema</th>
 									<th>Problema</th>
 									<th>Acciones</th>
@@ -135,6 +136,9 @@ $espFil = $espRes->fetch_assoc();
 
 							</tbody>
 						</table>
+						</div>
+
+						
 					</section>
 				</article>
 
