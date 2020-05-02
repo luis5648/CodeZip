@@ -1,6 +1,17 @@
 <?php
 require 'conexion.php';
 
+require 'Seguridad.php';
+$seguridad = new Seguridad();
+
+if ($seguridad->getUsuario() == null) {
+    header('Location: ../../index.html');
+    exit;
+}
+
+
+
+
 function verificar_email($email)
 {
   if(preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@(alumnos.udg.mx)+$/",$email))

@@ -1,3 +1,12 @@
+<?php
+require '../princ/Seguridad.php';
+$seguridad = new Seguridad();
+
+if ($seguridad->getUsuario() == null) {
+    header('Location: ../../index.html');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 

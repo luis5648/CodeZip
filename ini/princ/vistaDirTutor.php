@@ -1,3 +1,16 @@
+<?php
+require 'Seguridad.php';
+$seguridad = new Seguridad();
+
+if ($seguridad->getUsuario() == null) {
+    header('Location: ../../index.html');
+    exit;
+}
+
+
+
+?>
+
 <style>
     .arLi {
         color: cyan;

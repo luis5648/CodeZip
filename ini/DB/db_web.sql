@@ -16,10 +16,7 @@ create table alumnos(
   apellidosAlumno varchar(25),
   nombreUsuario varchar(25),
   passAlumno varchar(25),
-  emailAlumno varchar(60),
-  nivel int,
-  cursosSiguiendo int,
-  foreign key (cursosSiguiendo) references cursos(idCurso)
+  emailAlumno varchar(60)
 );
 
 
@@ -47,13 +44,25 @@ create table problemas(
 
 );
 
+create table soluciones(
 
+  idSolucion int primary key not null auto_increment,
+  idProblema int,
+  idAlumno int,
+  solucion text,
+
+
+  foreign key (idProblema) references problemas(idProblema),
+  foreign key (idAlumno) references alumnos(idAlumno)
+
+
+);
 
 insert into cursos values (1,'Java');
 insert into cursos values (2,'Python');
 insert into cursos values (3,'C, C++');
 
-insert into alumnos values (1,'Luis','ap1','user1','12345','123@123.com',1,1);
+insert into alumnos values (1,'Luis','Román','user1','12345','luis.rmarin@alumnos.udg.mx');
 
 -- inserts de tutores:
 
