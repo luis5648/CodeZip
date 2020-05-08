@@ -89,8 +89,7 @@
 								<p>Nombre del alumno: <?php echo $row["nombreAlumno"];?>  </p>
 								<p>E-mail registrado: <?php echo $row["emailAlumno"];?> </p>
 								<p>Apellidos: <?php echo $row["apellidosAlumno"];?>  </p>
-								<p>Curso actual : 									</p>
-								<!--	PONER QUERY DE CURSO ACTUAL (SI LO HAY) -->
+								
 							</div>  
 					</div>
 
